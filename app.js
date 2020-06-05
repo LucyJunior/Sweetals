@@ -62,5 +62,6 @@ app.use(cookieParser());
 // Routes middleware
 app.use('/', indexRouter);
 app.use('/', authRouter);
+app.use('/flowerlist', indexRouter);
 
 module.exports = app;
