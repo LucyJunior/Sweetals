@@ -1,17 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/signup', (req, res) => {
-  res.render('auth/signup.hbs');
-});
+// router.get('/signup', (req, res) => {
+//   res.render('auth/signup.hbs');
+// });
 
-router.post('/signup', (req, res) => {
+// router.post('/signup', (req, res) => {
   
-  const {username, email, password } = req.body;
-  console.log(username, email, password);
-  res.send('Got the data!');
+//   const {username, email, password } = req.body;
+//   console.log(username, email, password);
+//   res.send('Got the data!');
 
-});
+// });
 
 const bcrypt = require('bcryptjs');
 const UserModel = require('../models/User.model');
@@ -42,14 +42,14 @@ router.post('/signup', (req, res) => {
         return;  
     }
 
-    const myPassRegex = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*\.])(?=.{8,})/);
-    if (!myPassRegex.test(password)) {
-      res.status(500)
-          .render('auth/signup.hbs', {
-            errorMessage: 'Password needs to have 8 characters, a number and an Uppercase alphabet'
-          });
-        return;  
-    }
+    // const myPassRegex = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*\.])(?=.{8,})/);
+    // if (!myPassRegex.test(password)) {
+    //   res.status(500)
+    //       .render('auth/signup.hbs', {
+    //         errorMessage: 'Password needs to have 8 characters, a number and an Uppercase alphabet'
+    //       });
+    //     return;  
+    // }
 
     bcrypt.genSalt(12)
       .then((salt) => {
@@ -58,7 +58,8 @@ router.post('/signup', (req, res) => {
           .then((passwordHash) => {
             UserModel.create({email, username, passwordHash})
               .then(() => {
-                res.redirect('/profile');
+                console.log("User created")
+                res.redirect('/signin');
               })
               .catch((err) => {
                 if (err.code === 11000) {
