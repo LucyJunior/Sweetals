@@ -81,6 +81,8 @@ router.post('/signup', (req, res) => {
 
 });
 
+const FlowerModel = require('../models/Flower.model');
+
 router.get('/signin', (req, res) => {
   res.render('auth/signin.hbs');
 });
