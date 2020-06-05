@@ -1,6 +1,10 @@
 
 >>>>>>> origin/master
 # Sweetals
+Sweetals about our app
+lalala
+# Sweetals
+>>>>>>> Stashed changes
 ## Description
  Sweetals is an app about recipes including edibles flowers, those recipes add some colors to the table in a very original way.
  Some recipes are already there to use and the rest are create by all the users who had created an account in it.
@@ -75,7 +79,6 @@ FlowerSchema ({ name: String,
 family: String,
 description: String
 })
-
 Recipe ({ title: String, required: true, minlength: 6, maxlength: 10,
 Cooking time: Number, required true,
 Number of people : Number, required: true,
