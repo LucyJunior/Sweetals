@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-<<<<<<< HEAD
 
 router.get('/signup', (req, res) => {
   res.render('auth/signup.hbs');
@@ -14,7 +13,6 @@ router.post('/signup', (req, res) => {
 
 });
 
-=======
 const bcrypt = require('bcryptjs');
 const UserModel = require('../models/User.model');
 
@@ -152,6 +150,5 @@ router.post('/signin', (req, res) => {
 router.get('/profile', (req, res) => {
     res.render('users/profile.hbs', {userData: req.session.loggedInUser});
 })
->>>>>>> a391c5dba87fceb89eb0e97574678b5ee73a1d8d
 
 module.exports = router;

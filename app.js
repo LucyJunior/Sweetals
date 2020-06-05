@@ -44,7 +44,7 @@ app.use(session({
       maxAge: 60*60*24*1000 //60 sec * 60 min * 24hrs = 1 day (in milliseconds)
     },
     store: new MongoStore({
-        url: process.env.MONGODB_URI,
+        url: 'mongodb://localhost/sweetalsdb',
         //time to live (in seconds)
         ttl: 60*60*24,
         autoRemove: 'disabled'
