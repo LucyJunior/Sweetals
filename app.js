@@ -33,6 +33,25 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // Sets up morgan in our middleware so that we can see the requests getting logged
 app.use(logger('dev'));
 
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+ 
+app.use(session({
+    secret: 'my-secret-weapon',
+    saveUninitialized: false,
+    resave: true,
+    cookie: {
+      maxAge: 60*60*24*1000 //60 sec * 60 min * 24hrs = 1 day (in milliseconds)
+    },
+    store: new MongoStore({
+        url: process.env.MONGODB_URI,
+        //time to live (in seconds)
+        ttl: 60*60*24,
+        autoRemove: 'disabled'
+    })
+}));
+
+
 // a body parser to allow us to parse form submissions
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

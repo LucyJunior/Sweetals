@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <form method="POST" action="../signup">
@@ -10,3 +11,18 @@
 <button type="submit">Sign Up</button>
 
 </form>
+=======
+<form method="POST" action="/signup">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" >
+    <label for="user-email">Email</label>
+    <input type="email" name="email" id="user-email" >
+    <label for="user-pass">Password</label>
+    <input type="password" name="password" id="user-pass" >
+    <button type="submit" >Sign Up</button>
+</form>
+
+{{#if errorMessage}}
+  <div class="error">{{errorMessage}}</div>
+{{/if}}  
+>>>>>>> a391c5dba87fceb89eb0e97574678b5ee73a1d8d
