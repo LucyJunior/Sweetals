@@ -1,9 +1,6 @@
 
 >>>>>>> origin/master
 # Sweetals
-Sweetals about our app
-lalala
-# Sweetals
 >>>>>>> Stashed changes
 ## Description
  Sweetals is an app about recipes including edibles flowers, those recipes add some colors to the table in a very original way.
