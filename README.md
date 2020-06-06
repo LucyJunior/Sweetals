@@ -58,7 +58,7 @@ recipe details - By clicking on a recipe in the recipe list the user has acces t
     renders userRecipe.hbs
 * GET /flowers-info/:flowerID/:recipeID/edit
   renders edit.hbs
-* POST /flowers-info/:flowerID/:recipeID/edit
+* POST /flowers-info/:flowerID/:recipeID/edit.hbs
 * POST /flowers/:flowersID/:recipeID/delete
 * GET /logout
 
