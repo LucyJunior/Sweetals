@@ -22,6 +22,7 @@ const authRouter = require('./routes/auth.routes');
 const flowerlistRouter = require('./routes/flowerlist.routes');
 const newRecipeRouter = require('./routes/newrecipe.routes');
 const userRecipeRouter = require ('./routes/userRecipe.routes');
+const flowerInfoRouter = require ('./routes/flower-info.routes');
 
 const app = express();
 
@@ -69,5 +70,6 @@ app.use('/', authRouter);
 app.use('/flowerlist', flowerlistRouter);
 app.use('/newRecipe', newRecipeRouter);
 app.use('/userRecipe', userRecipeRouter);
+app.use('/flower-info', flowerInfoRouter);
 
 module.exports = app;
