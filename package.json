@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "chalk": "^4.0.0",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.4",
     "dotenv": "^8.2.0",
@@ -46,5 +49,8 @@
   "bugs": {
     "url": "https://github.com/LucyJunior/Sweetals/issues"
   },
-  "homepage": "https://github.com/LucyJunior/Sweetals#readme"
+  "homepage": "https://github.com/LucyJunior/Sweetals#readme",
+  "bin": {
+    "basicauth": "seeds.js"
+  }
 }
