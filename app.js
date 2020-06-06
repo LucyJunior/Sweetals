@@ -12,6 +12,7 @@ const cookieParser = require('cookie-parser');
 const hbs = require('hbs');
 const mongoose = require('mongoose');
 
+
 // Set up the database
 require('./configs/db.config');
 
@@ -20,6 +21,7 @@ const indexRouter = require('./routes/index.routes');
 const authRouter = require('./routes/auth.routes');
 const flowerlistRouter = require('./routes/flowerlist.routes');
 const newRecipeRouter = require('./routes/newrecipe.routes');
+const userRecipeRouter = require ('./routes/userRecipe.routes');
 
 const app = express();
 
@@ -66,5 +68,6 @@ app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/flowerlist', flowerlistRouter);
 app.use('/newRecipe', newRecipeRouter);
+app.use('/userRecipe', userRecipeRouter);
 
 module.exports = app;
