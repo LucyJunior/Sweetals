@@ -56,10 +56,16 @@ app.use(session({
     })
 }));
 
+// app.get('/flowerlist', function (req,res) {
+//   res.render(__dirname + '/views/users/flowerlist.hbs', {flower})
+// })
+
+
 
 // a body parser to allow us to parse form submissions
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 // helps us use the cookies from each request
 app.use(cookieParser());
@@ -71,5 +77,7 @@ app.use('/flowerlist', flowerlistRouter);
 app.use('/newRecipe', newRecipeRouter);
 app.use('/userRecipe', userRecipeRouter);
 app.use('/flower-info', flowerInfoRouter);
+
+
 
 module.exports = app;

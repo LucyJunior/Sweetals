@@ -30,13 +30,14 @@ const recipeSchema = new Schema(
     flowerIngredients: {
       /*type: Schema Object ID*/
     }
+    
   },
 
     { 
       timestamps: true
     }
 
-  
+
 );
 
  module.exports = model('Recipe', recipeSchema);
