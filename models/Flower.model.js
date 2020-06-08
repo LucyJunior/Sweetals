@@ -6,6 +6,6 @@ let flowerSchema = new mongoose.Schema(
     description: String},
 );
 
-flowerModel = mongoose.model('Flower', flowerSchema);
+let FlowerModel = mongoose.model('Flower', flowerSchema);
 
-module.exports = flowerModel;
+module.exports = FlowerModel;

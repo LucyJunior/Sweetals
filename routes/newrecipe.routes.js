@@ -1,8 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page */
-router.get('/', (req, res) => res.render('users/newrecipe', {title: 'new recipe of the user'}))
+let RecipeModel = require ('../models/Recipe.model') 
+
+
+
+router.get('/', (req, res) => {
+  console.log('it s working')
+  RecipeModel.find()
+  .then((recipe) => {
+    res.render('users/newrecipe',{
+      recipe
+    })
+  })
+});
 
 
 module.exports = router;
