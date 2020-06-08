@@ -11,10 +11,10 @@
 
 <body>
   <nav>
-    <ul>
+      <ul>
 
       <li id="to-right"></li>
-      <a href="/floweList">List</a> <span> | </span>
+      <a href="/flowerList">List</a> <span> | </span>
       </li>
 
       <li id="to-right"></li>
@@ -33,18 +33,25 @@
 
   {{{body}}}
 
-  {{#each result}}
-    <h3>Name : {{this.name}}</h3>
-    <p>Family: {{this.family}} </p>
-    <p>More about the flower: {{this.description}}</p>
-    <a href="/views/users/newRecipe">Add a recipe</a>
-  {{/each}}
-
-  
   <script src="/javascripts/script.js"></script>
 </body>
 
+{{!-- 
+<div class="recipe-full-visualizer">
+        <h1>{{recipeName}}</h1>
+        <div class="picturecol">{{picturesofDish}}</div>
+        <div class="descriptioncol">{{description}}</div>
+        <p class="prepsection">Preparation time: {{preparationTime}}</p>
+        <p class="servessection">Serves: {{servings}}</p>
+        <div class="ingredientstext">{{ingredients}}</div>
+        <div class="stepstext">{{steps}}</div>
+    </div> --}}/
+
+
 </html>
+
+
+<div>Info about the flowers</div>
 
 
 {{#if userData}}

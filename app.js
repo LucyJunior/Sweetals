@@ -19,10 +19,10 @@ require('./configs/db.config');
 // Routers
 const indexRouter = require('./routes/index.routes');
 const authRouter = require('./routes/auth.routes');
-const flowerlistRouter = require('./routes/flowerlist.routes');
-const newRecipeRouter = require('./routes/newrecipe.routes');
+const flowerListRouter = require('./routes/flowerList.routes');
+const newRecipeRouter = require('./routes/newRecipe.routes');
 const userRecipeRouter = require ('./routes/userRecipe.routes');
-const flowerInfoRouter = require ('./routes/flower-info.routes');
+const flowerInfoRouter = require ('./routes/flowerInfo.routes');
 
 const app = express();
 
@@ -73,10 +73,10 @@ app.use(cookieParser());
 // Routes middleware
 app.use('/', indexRouter);
 app.use('/', authRouter);
-app.use('/flowerlist', flowerlistRouter);
+app.use('/flowerList', flowerListRouter);
 app.use('/newRecipe', newRecipeRouter);
 app.use('/userRecipe', userRecipeRouter);
-app.use('/flower-info', flowerInfoRouter);
+app.use('/flowerInfo', flowerInfoRouter);
 
 
 

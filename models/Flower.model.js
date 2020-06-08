@@ -1,14 +1,11 @@
- const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-const FlowerSchema = new mongoose.Schema(
-     { name: String,
-      family: String,
-      description: String},
-    // { timestamps: true}
-  
-)
+let flowerSchema = new mongoose.Schema(
+  { name: String,
+    family: String,
+    description: String},
+);
 
-let FlowerModel = mongoose.model('flower', FlowerSchema);
+flowerModel = mongoose.model('Flower', flowerSchema);
 
-module.exports = FlowerSchema
-
+module.exports = flowerModel;
