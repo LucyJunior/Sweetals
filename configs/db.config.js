@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/sweetalsdb';
 
+//configs.js connect MongoDB data to the server
+
 mongoose
   .connect(MONGODB_URI, {
     useNewUrlParser: true,

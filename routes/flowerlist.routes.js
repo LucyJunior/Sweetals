@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
+let FlowerModel = require ('../models/Flower.model') 
 
 router.get('/', (req, res) => {
-  flowerModel.find()
-  .then((result) => {
-    // console.log("this is the resultat", resultat)
-    res.render('../views/users/flowerList', {
-      result
+  console.log('it s working')
+  FlowerModel.find()
+  .then((flowers) => {
+    res.render('users/flowerList',{
+      flowers
     })
   })
 });
