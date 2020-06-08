@@ -7,8 +7,8 @@ const RecipeSchema = new mongoose.Schema(
        type: String,
        required: [true, 'Please enter your title here'], 
        unique: true,
-       minlength: 6,
-       maxlength: 10
+      //  minlength: 6,
+      //  maxlength: 10
      }, 
 
      cookingTime: {
@@ -21,11 +21,11 @@ const RecipeSchema = new mongoose.Schema(
       required: true
     },
 
-    Description: {
+    description: {
       type: String,
       required: true, 
-      minlength: 50,
-      maxlength: 300
+      // minlength: 50,
+      // maxlength: 300
     },
   },
     { 
