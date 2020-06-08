@@ -4,21 +4,36 @@ require('../configs/db.config')
 let FlowerModel = require('../models/Flower.model');
 
 const flowers = [{
-    name: "Tomato salad with flowers, za’atar and farro recipe ",
-    family: "xxx",
-    description: "Almost too pretty to eat, it is a great way to use the most magical of ingredients, edible flowers, which instantly turn anything into a celebration. Whether you buy your pesticide-free flowers at your farmers’ market, fine grocery store, or grow some in your garden, any combination will work here and add wonderful fragrance and color to your salad."
+    name: "Bee Balm",
+    family: "Lamiaceae",
+    description: "Bee balm flowers are also medicinal, with antimicrobial and antispasmodic properties.  They’re commonly used to treat colds, flu, coughs, digestive upset, bloating, nausea and menstrual cramps.  Typically, they’re used in salves to treat stings, scrapes and rashes."
   },
   {
-    name: "Bachelor A ",
-    family: "aaa",
-    description: "Also known as cornflower, bachelors buttons are bright blue edible flowers with a mild grassy flavor.  While the flower petals are a tasty edible, the green parts are much less pleasant.  Carefully remove the green sepals around the flower to avoid their bitter taste.  "
+    name: "BEGONIA",
+    family: "Begoniaceae",
+    description: "With a flavor reminiscent of fresh cucumbers, borage flowers are often added to cool summertime drinks.  While the edible flowers tend to get all the attention, borage leaves are also edible and make a lovely salad green.  The greens can also be served cooked, and added to anything in place of spinach.   "
   },
   {
-    name: "Bachelor B ",
+    name: "CALENDULA",
     family: "bbb",
-    description: "Also known as cornflower, bachelors buttons are bright blue edible flowers with a mild grassy flavor.  While the flower petals are a tasty edible, the green parts are much less pleasant.  Carefully remove the green sepals around the flower to avoid their bitter taste.  "
+    description: "Calendula flower is used to prevent muscle spasms, start menstrual periods, and reduce fever. It is also used for treating sore throat and mouth, menstrual cramps, cancer, and stomach and duodenal ulcers. Calendula has also been used for measles, smallpox, and jaundice "
   },
+  {
+    name: "FRUIT BLOSSOMS ",
+    family: "xxx",
+    description: "The flowers of many fruiting trees and shrubs are edible long before they set fruit.  The problem is if you eat the flowers they won’t turn into fruit.  This is a good way to thin a crop if your apple tree is over-producing.  Thinning the blossoms ensures that the remaining fruit will be larger and helps prevent stress on the tree."
+  },
+{
+  name: "HIBISCUS",
+  family:"",
+  dsecription: "If you’ve ever heard of hibiscus tea, maybe you never made the connection to that tropical flower in the garden.  They’re one and the same, and that sweet/tart floral tea captures the very essence of hibiscus.  The blossoms taste a bit like cranberry, and they often stain foods bright red during cooking."
+}
+
 ];
+
+//When you do the get request in recipe route, another thing you want to do is connect to the database, you get all the info from the flowers and you pass that object to the render.FlowerModelFineflowers, you need to go to query's of mongoose.
+//In the same route where you get the information.FlowerModel
+//a way to 
 
 let dataBase = FlowerModel.create(flowers)
 .then((response) => {
