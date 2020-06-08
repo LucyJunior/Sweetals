@@ -27,7 +27,7 @@ const RecipeSchema = new mongoose.Schema(
       minlength: 50,
       maxlength: 300
     },
-
+  },
     { 
       timestamps: true
     }

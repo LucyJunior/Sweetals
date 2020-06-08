@@ -2,30 +2,36 @@
   <ul>
 
     <li id="to-right"></li>
-    <a href="/flowerList">List</a> <span> | </span>
+    <a href="/flowerList">List</a>
+    <span> | </span>
     </li>
 
     <li id="to-right"></li>
-    <a href="/newRecipe">Make your own recipe</a> <span> | </span>
+    <a href="/newRecipe">Make your own
+      recipe</a> <span> | </span>
     </li>
 
     <li id="to-right"></li>
-    <a href="/userRecipe">Favorites</a> <span> | </span>
+    <a href="/userRecipe">Favorite</a>
+    <span> | </span>
     </li>
 
     <li id="to-right"></li>
-    <a href="/flowerInfo">Flower list</a> <span> | </span>
+    <a href="/flowerInfo">Flower
+      list</a> <span> | </span>
     </li>
   </ul>
 </nav>
 
 <form>
-  <div class="form-group">
-    <label for="formGroupExampleInput">Ingredients</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-  </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">Steps</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-  </div>
+ <form method="post" action="/newRecipe/create">
+<label for="tittle">Tittle</label>
+<input type="String" name="tittle" id="tittle">
+<label for="cookingtime">Cooking Time</label>
+<input type="Number" name="cookingtime" id="cookingtime">
+<label for="numberofpeople">Number of people</label>
+<input type="Number" name="people" id="people">
+<label for="description">Description</label>
+<input type="String" name="description" id="description">
+<button formmethod="POST" formaction="/newRecipe/create" type="submit">Save</button>
 </form>
