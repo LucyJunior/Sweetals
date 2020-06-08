@@ -28,8 +28,6 @@ const RecipeSchema = new mongoose.Schema(
       maxlength: 300
     },
 
-let RecipeModel = mongoose.model('Recipe', RecipeSchema);
-
     { 
       timestamps: true
     }
