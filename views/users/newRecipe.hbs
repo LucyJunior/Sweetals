@@ -23,11 +23,22 @@
   </ul>
 </nav>
 
+<form method="POST" action="/newRecipe">
+    <label for="title">Title</label>
+      <input type="text" name="title" id="title">
 
+    <label for="cookingTime">Cooking Time</label>
+    <input type="number" name="cookingTime" id="cookingTime" >
+
+    <label for="numberOfPeople">Number of people</label>
+    <input type="number" name="numberOfPeople" id="numberOfPeople" min="1">
+
+    <label for="description">recipe</label>
+     <textarea name="description" rows="10" cols="30" placeholder="Your recipe here"></textarea>
+
+     <button type="submit" >Save</button>
+</form>
 
 {{#if errorMessage}}
   <div class="error">{{errorMessage}}</div>
 {{/if}}  
-
-
-<div>new recipe page!!</div>
