@@ -36,13 +36,13 @@ recipe details - By clicking on a recipe in the recipe list the user has acces t
  body:
  username
  password
-* GET /flowerlist
- renders flowerlist.hbs (pictures list + menu bar)
-* GET /flower-info/:flowerID
-  //renders flower-info.hbs 
+* GET /flowerList
+ renders flowerList.hbs (pictures list + menu bar)
+* GET /flowerInfo/:flowerID
+  //renders flowerInfo.hbs 
   includes list of recipes
   redirects to / if presses button 
-* GET /flower-info/:flowerID/:recipeID
+* GET /flowerInfo/:flowerID/:recipeID
 * GET /newRecipe
     renders to newRecipe.hbs
     Burger menu
