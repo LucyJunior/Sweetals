@@ -1,54 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{title}}</title>
-  <link rel="stylesheet" href="/stylesheets/style.css" />
-</head>
-
-<body>
   <nav>
     <ul>
 
       <li id="to-right"></li>
-      <a href="/floweList">List</a> <span> | </span>
+      <a href="/floweList">List</a>
+      <span> | </span>
       </li>
 
       <li id="to-right"></li>
-      <a href="/newRecipe">Make your own recipe</a> <span> | </span>
+      <a href="/newRecipe">Make your own
+        recipe</a> <span> | </span>
       </li>
 
       <li id="to-right"></li>
-      <a href="/userRecipe">Favorite</a> <span> | </span>
+      <a href="/userRecipe">Favorite</a>
+      <span> | </span>
       </li>
 
       <li id="to-right"></li>
-      <a href="/flowerInfo">Flower list</a> <span> | </span>
+      <a href="/flowerInfo">Flower
+        list</a> <span> | </span>
       </li>
     </ul>
   </nav>
 
-  {{{body}}}
 
   {{#each flowers}}
-    <h3>Name : {{this.name}}</h3>
-    <p>Family: {{this.family}} </p>
-    <p>More about the flower: {{this.description}}</p>
-    <a href="/views/users/newRecipe">Add a recipe</a>
+  <h3>Name : {{this.name}}</h3>
+  <p>Family: {{this.family}} </p>
+  <p>More about the flower:
+    {{this.description}}</p>
   {{/each}}
+  <a href="/newRecipe">Add a
+    recipe</a>
 
-  
-  <script src="/javascripts/script.js"></script>
-</body>
-
-</html>
-
-
-{{#if userData}}
-
-<p>Hello {{userData.username}}</p>
-
-{{/if}}
