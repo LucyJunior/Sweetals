@@ -1,8 +1,36 @@
 
+  <nav>
+    <ul>
+
+      <li id="to-right"></li>
+      <a href="/floweList">List</a>
+      <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/newRecipe">Make your own
+        recipe</a> <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/userRecipe">Favorite</a>
+      <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/flowerInfo">Flower
+        list</a> <span> | </span>
+      </li>
+    </ul>
+  </nav>
+
 
   {{#each flowers}}
-    <h3>Name : {{this.name}}</h3>
-    <p>Family: {{this.family}} </p>
-    <p>More about the flower: {{this.description}}</p>
-    <a href="/views/users/newRecipe">Add a recipe</a>
+  <h3>Name : {{this.name}}</h3>
+  <p>Family: {{this.family}} </p>
+  <p>More about the flower:
+    {{this.description}}</p>
   {{/each}}
+  <a href="/newRecipe">Add a
+    recipe</a>
+
