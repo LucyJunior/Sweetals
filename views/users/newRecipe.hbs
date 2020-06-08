@@ -1,46 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<nav>
+  <ul>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{title}}</title>
-  <link rel="stylesheet" href="/stylesheets/style.css" />
-</head>
+    <li id="to-right"></li>
+    <a href="/flowerList">List</a>
+    <span> | </span>
+    </li>
 
-<body>
-  <nav>
-    <ul>
+    <li id="to-right"></li>
+    <a href="/newRecipe">Make your own
+      recipe</a> <span> | </span>
+    </li>
 
-      <li id="to-right"></li>
-      <a href="/flowerList">List</a> <span> | </span>
-      </li>
+    <li id="to-right"></li>
+    <a href="/userRecipe">Favorite</a>
+    <span> | </span>
+    </li>
 
-      <li id="to-right"></li>
-      <a href="/newRecipe">Make your own recipe</a> <span> | </span>
-      </li>
+    <li id="to-right"></li>
+    <a href="/flowerInfo">Flower
+      list</a> <span> | </span>
+    </li>
+  </ul>
+</nav>
 
-      <li id="to-right"></li>
-      <a href="/userRecipe">Favorite</a> <span> | </span>
-      </li>
 
-      <li id="to-right"></li>
-      <a href="/flowerInfo">Flower list</a> <span> | </span>
-      </li>
-    </ul>
-  </nav>
 
-  <script src="/javascripts/script.js"></script>
-</body>
+{{#if errorMessage}}
+  <div class="error">{{errorMessage}}</div>
+{{/if}}  
 
-</html>
 
 <div>new recipe page!!</div>
-
-
-{{#if userData}}
-
-<p>Hello {{userData.username}}</p>
-
-{{/if}}
