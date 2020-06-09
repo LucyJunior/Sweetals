@@ -24,6 +24,12 @@
   <h3>Name : {{this.name}}</h3>
   <p>Family: {{this.family}} </p>
  <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
-  {{/each}}
+{{/each}}
+
+{{#if userData}}
+
+<p>Hello {{userData.username}}</p>
+
+{{/if}}
  
 

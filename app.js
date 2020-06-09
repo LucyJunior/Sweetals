@@ -1,7 +1,6 @@
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
-
 //A library that helps us log the requests in the console
 const logger = require('morgan');
 
@@ -66,7 +65,6 @@ app.use(session({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
 // helps us use the cookies from each request
 app.use(cookieParser());
 
@@ -74,7 +72,7 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/flowerList', flowerListRouter);
-//app.use('/newRecipe', newRecipeRouter);
+app.use('/newRecipe', newRecipeRouter);
 app.use('/userRecipe', userRecipeRouter);
 app.use('/flowerInfo', flowerInfoRouter);
 

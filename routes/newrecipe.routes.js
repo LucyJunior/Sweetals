@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-//const multer = require('multer');
-//const upload = multer({dest: '/uploads/'});
 
 let RecipeModel = require ('../models/Recipe.model')
 let FlowerModel = require ('../models/Flower.model')
