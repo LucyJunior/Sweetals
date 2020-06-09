@@ -43,25 +43,26 @@ router.post('/:id/edit', (req, res, next) => {
 
 });
 
-router.post('/drones/:id/delete', (req, res, next) => {
-  let id = req.params.id
-  DronesModel.findByIdAndDelete()(id, {
-      $set: {
-        title: req.body.title,
-        numberOfPeople: req.body.numberOfPeople,
-        ingredients: req.body.ingredients,
-        preparation: req.body.preparation,
-      }
-    })
-    .then(() => {
-      res.redirect('/')
-    })
-    .catch((response) => {
-      res.render('../users/userRecipe.hbs', {
-        response
-      })
-    })
-});
+// router.post('/drones/:id/delete', (req, res, next) => {
+//   let id = req.params.id
+//   DronesModel.findByIdAndDelete()(id, {
+//       $set: {
+//         title: req.body.title,
+//         numberOfPeople: req.body.numberOfPeople,
+//         ingredients: req.body.ingredients,
+//         preparation: req.body.preparation,
+//       }
+//     })
+//     .then(() => {
+//       res.redirect('/')
+//     })
+//     .catch((response) => {
+//       res.render('../users/userRecipe.hbs', {
+//         response
+//       })
+//     })
+// });
+
 
 
 module.exports = router;
