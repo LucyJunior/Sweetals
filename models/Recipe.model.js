@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 
 const RecipeSchema = new mongoose.Schema(
   {
+    flowerId: {
+      type: mongoose.Schema.Types.ObjectId
+   },
      title: {
        type: String,
        required: [true, 'Please enter your title here'], 
@@ -23,14 +26,14 @@ const RecipeSchema = new mongoose.Schema(
 
     ingredients: {
       type: String,
-      required: true, 
+      //required: true, 
       // minlength: 50,
       // maxlength: 300
     },
 
     preparation: {
       type: String,
-      required: true, 
+      //required: true, 
       // minlength: 50,
       // maxlength: 300
     },

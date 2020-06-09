@@ -43,7 +43,7 @@
 <button formmethod="POST" formaction="/newRecipe/create" type="submit">Save</button>
 </form> --}}
 
-<form method="POST" action="/newRecipe">
+<form method="POST" action="/flowerInfo/{{flowerId}}/newRecipe">
   <label for="title">Title</label>
   <input type="text" name="title"
     id="title">
@@ -64,13 +64,9 @@
   <textarea name="description" rows="10"
     cols="30"
     placeholder="Your recipe here"></textarea>
-
-
+  {{!-- //when the user submits this form, how will we pass the flower details ? --}}
 
   <button type="submit">Save</button>
 </form>
 
 
-   {{#each flowers}}
-      <img src="{{this.img}}" class="d " alt=" ">
-      {{/each}}

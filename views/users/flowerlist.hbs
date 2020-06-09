@@ -20,13 +20,10 @@
     </ul>
   </nav>
 
-  {{#each flowers}}
+{{#each flowers}}
   <h3>Name : {{this.name}}</h3>
   <p>Family: {{this.family}} </p>
- <p>Pics: {{this.img}}</p>
-  <p>More about the flower:
-    {{this.description}}</p>
+ <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
   {{/each}}
-  <a href="/newRecipe">Add a
-    recipe</a>
+ 
 
