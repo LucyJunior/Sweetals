@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 
 const RecipeSchema = new mongoose.Schema(
   {
+     flowerId: {
+        type: mongoose.Schema.Types.ObjectId
+     },
      title: {
        type: String,
        required: [true, 'Please enter your title here'], 
