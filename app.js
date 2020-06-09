@@ -74,7 +74,7 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/flowerList', flowerListRouter);
-//app.use('/newRecipe', newRecipeRouter);
+app.use('/newRecipe', newRecipeRouter);
 app.use('/userRecipe', userRecipeRouter);
 app.use('/flowerInfo', flowerInfoRouter);
 

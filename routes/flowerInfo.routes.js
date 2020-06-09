@@ -12,14 +12,8 @@ router.get('/:id', (req, res, next) => {
         .then((recipes) => {
           res.render('users/flowerInfo',{flower, recipes})
         })
-   
   })
 });
-
-router.get('/:id/newRecipe', (req, res) => {
-  console.log('id is', req.params.id)
-  res.render('users/newRecipe.hbs', {flowerId: req.params.id});
-})
 
 router.post('/:id/newRecipe', (req, res) => {
   const {
@@ -29,7 +23,7 @@ router.post('/:id/newRecipe', (req, res) => {
     ingredients,
     preparation,
 
-  } = req.body;
+  } = req.body; 
 
   FlowerModel.findById(req.params.id)
    .then((flower) => {
@@ -56,4 +50,4 @@ router.post('/:id/newRecipe', (req, res) => {
 })
 
 
-module.exports = router;
+module.exports = router

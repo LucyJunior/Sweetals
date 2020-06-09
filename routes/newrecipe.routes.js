@@ -5,6 +5,7 @@ const router = express.Router();
 
 let RecipeModel = require ('../models/Recipe.model')
 let FlowerModel = require ('../models/Flower.model')
+let UserModel = require ('../models/User.model')
 
 
 router.get('/', (req, res, next) => {
@@ -44,5 +45,21 @@ router.post('/', (req, res, next) => {
     })
 
 });
+router.get('/:id/newRecipe', (req, res) => {
+  console.log('id is', req.params.id)
+  res.render('users/newRecipe.hbs', {flowerId: req.params.id});
+})
+
+
+
+router.get('/:id', (req, res, next) => {
+  console.log('it s working')
+  UserModel.findById(req.params.id)
+  .then((userData) => {
+          res.render('users/newRecipe',{userData})
+        })
+});
+
+
 
 module.exports = router;
