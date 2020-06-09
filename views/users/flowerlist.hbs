@@ -1,13 +1,9 @@
 
-
-
   {{#each flowers}}
   <h3>Name : {{this.name}}</h3>
   <p>Family: {{this.family}} </p>
- <p>Pics: {{this.img}}</p>
+ <img src="{{this.img}}">
   <p>More about the flower:
     {{this.description}}</p>
   {{/each}}
-  <a href="/newRecipe">Add a
-    recipe</a>
-
+  <a href="/newRecipe">Add a recipe</a>
