@@ -45,8 +45,8 @@
   <button type="submit">Save</button>
 </form>
 
-//button delete
+{{#if userData}}
 
-<a href="/recipe/{{recipe._id}}/delete">
-<button type="button" class="btn btn-dark">Delete</button>
-</a>
+<p>Hello {{userData.username}}</p>
+
+{{/if}}

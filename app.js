@@ -1,7 +1,6 @@
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
-
 //A library that helps us log the requests in the console
 const logger = require('morgan');
 
@@ -65,7 +64,6 @@ app.use(session({
 // a body parser to allow us to parse form submissions
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 
 // helps us use the cookies from each request
 app.use(cookieParser());

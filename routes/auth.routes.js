@@ -112,6 +112,7 @@ router.post('/signin', (req, res) => {
   UserModel.findOne({email})
     .then((userData) => {
          //check if passwords match
+        
         bcrypt.compare(password, userData.passwordHash)
           .then((doesItMatch) => {
               //if it matches

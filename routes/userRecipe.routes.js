@@ -1,5 +1,10 @@
 const express = require ('express');
 const router = express.Router();
+const session = require ('express-session')
+
+let FlowerModel = require ('../models/Flower.model')
+
+// .populate all the recipe in this page
 
 let RecipeModel = require('../models/Recipe.model')
 

@@ -23,5 +23,15 @@
   {{/each}}
   
 
+ {{!-- here we need to create  a loop with #each to show the list of recipe saved in : newRecip.hbs, link to userData --}}
+ 
+ {{#each recipe}}
+  <h3>Title : {{this.title}}</h3>
+{{/each}}
 
 <div>new recipe page!!</div>
+{{#if userData}}
+
+<p>Hello {{userData.username}}</p>
+
+{{/if}}
