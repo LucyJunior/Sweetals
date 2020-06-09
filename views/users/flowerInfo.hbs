@@ -1,18 +1,16 @@
 
- <nav>
-      <ul>
-
+  <nav>
+    <ul>
       <li id="to-right"></li>
-      <a href="/flowerList">Flower List</a> <span> | </span>
-      </li>
-
-
-      <li id="to-right"></li>
-      <a href="/userRecipe">User Recipes</a> <span> | </span>
+      <a href="/flowerList">List of flowers</a> <span> | </span>
       </li>
 
       <li id="to-right"></li>
-      <a href="/flowerInfo">Flower Info</a> <span> | </span>
+      <a href="/userRecipe">My favorite recipes</a> <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/flowerInfo">Recipes with this flower</a> <span> | </span>
       </li>
     </ul>
   </nav>
@@ -21,6 +19,11 @@
   <h3>Name : {{flower.name}}</h3>
   <p>More about the flower:
     {{flower.description}}</p>
- <img src="{{flower.img}}">
+  <img src="{{flower.img}}">
 
-  <a href="/flowerInfo/{{flower._id}}/newRecipe"><button>Add a Recipe</button></a>
+{{#each recipes}}
+<p>{{this.title}}</p>
+{{/each}}
+ <a href="/flowerInfo/{{flower._id}}/newRecipe"><button>Add a Recipe</button></a> 
+
+  

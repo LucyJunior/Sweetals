@@ -26,6 +26,7 @@ router.post('/', (req, res, next) => {
 
   } = req.body;
   RecipeModel.create({
+    flowerId: flowerId,
     title : title,
     cookingTime: cookingTime,
     numberOfPeople :numberOfPeople,

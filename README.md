@@ -43,7 +43,7 @@ recipe details - By clicking on a recipe in the recipe list the user has acces t
   includes list of recipes
   redirects to / if presses button 
 * GET /flowerInfo/:flowerID/:recipeID
-* GET /newRecipe
+* GET /flowerInfo/:flowerID/newRecipe
     renders to newRecipe.hbs
     Burger menu
     Horizontal flower list
