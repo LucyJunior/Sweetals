@@ -9,6 +9,27 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
+  <nav>
+    <ul>
+      <li id="to-right"></li>
+      <a href="/flowerList">List of flowers</a> <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/newRecipe">Make your own recipe</a> <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/userRecipe">My favorite recipes</a> <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/flowerInfo">Recipes with this flower</a> <span> | </span>
+      </li>
+    </ul>
+  </nav>
+
+
 {{!-- <form>
  <form method="post" action="/newRecipe/create">
 <label for="tittle">Tittle</label>
@@ -50,21 +71,6 @@
 </form>
 
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-{{#each flowers}}
-    <div class="carousel-item active">
-      <img src="{{this.img}}" class="d-block w-100" alt="...">
-    </div>
-{{/each}}
-</div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  
-</div>
+   {{#each flowers}}
+      <img src="{{this.img}}" class="d " alt=" ">
+      {{/each}}
