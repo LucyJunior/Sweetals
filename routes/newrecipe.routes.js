@@ -21,13 +21,16 @@ router.post('/', (req, res, next) => {
     title,
     cookingTime,
     numberOfPeople,
-    description,
+    ingredients,
+    preparation,
+
   } = req.body;
   RecipeModel.create({
     title : title,
     cookingTime: cookingTime,
     numberOfPeople :numberOfPeople,
-    description : description,
+    ingredients : ingredients,
+    preparation : preparation,
     })
     .then(() => {
       res.redirect('/userRecipe')
