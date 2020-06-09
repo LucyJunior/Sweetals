@@ -21,18 +21,20 @@ const RecipeSchema = new mongoose.Schema(
       required: true
     },
 
-    description: {
+    ingredients: {
       type: String,
       required: true, 
       // minlength: 50,
       // maxlength: 300
     },
 
-    flowerIngredients: {
-      /*type: Schema Object ID*/
-    }
+    preparation: {
+      type: String,
+      required: true, 
+      // minlength: 50,
+      // maxlength: 300
+    },
   },
-
     { 
       timestamps: true
     }

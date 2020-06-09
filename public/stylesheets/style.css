@@ -30,6 +30,14 @@ form button {
   padding: 4px;
   width: 100%;
   margin-bottom: 20px;
+  
+}
+
+.ingredients,
+.square {
+  height: 500px;
+  width: 500px;
+  background-color: white;
 }
 
 form button {
@@ -99,3 +107,40 @@ ul li {
 }
 
 
+.recipe-full-visualizer {
+  background-color: lightpink;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-left: 10%;
+}
+
+.picturecol,
+.descriptioncol,
+.prepsection,
+.servessection,
+.ingredientstext {
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+}
+
+.picturecol img,
+.descriptioncol p {
+  width: 100%;
+  padding: 20px;
+}
+
+.ingredientstext {
+  background-color: white;
+  padding: 20px;
+}
+
+.stepstext {
+  width: 70%;
+  margin-left: 15%;
+  text-align: left;
+  background-color: white;
+  padding: 20px;
+}

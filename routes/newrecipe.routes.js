@@ -13,19 +13,38 @@ router.get('/', (req, res, next) => {
     res.render('users/newRecipe', {flowers})
   })
 });
+//passing the info of hbs
+router.get('/newRecipe/create', (req, res, next) => {
+    res.render('users/newRecipe.hbs') 
+});
+
+router.post('/users/create', (req, res, next) => {
+  const {name, family, description} = req.body;
+
+  FlowerModel.create({name, family, description})
+  .then((response) => {
+      res.redirect('/user/newRecipe')
+  })
+  .catch (() => {
+      res.send('something went wrong')
+  })
+});
 
 router.post('/', (req, res, next) => {
   const {
     title,
     cookingTime,
     numberOfPeople,
-    description,
+    ingredients,
+    preparation,
+
   } = req.body;
   RecipeModel.create({
     title : title,
     cookingTime: cookingTime,
     numberOfPeople :numberOfPeople,
-    description : description,
+    ingredients : ingredients,
+    preparation : preparation,
     })
     .then(() => {
       res.redirect('/userRecipe')
