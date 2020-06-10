@@ -3,6 +3,8 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/sweetalsdb';
 
 //configs.js connect MongoDB data to the server
 
+mongodb+srv://aurorecr:sweetalsal@cluster0-danc1.mongodb.net/sweetals?retryWrites=true&w=majority
+
 mongoose
   .connect(MONGODB_URI, {
     useNewUrlParser: true,
