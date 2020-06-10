@@ -5,19 +5,21 @@ const session = require('express-session')
 let RecipeModel = require('../models/Recipe.model')
 // .populate all the recipe in this page
 
-router.get('/:id', (req, res) => {
+router.get('/', (req, res) => {
   console.log('userRecipe route is working')
-  RecipeModel.findById(req.params.id)
-    .then((recipe) => {
-      UserModel.find({
-          recipeId: recipe._id
+  RecipeModel.find({
+  //give me all the values id which user is equal to 
+        //so if you wanna get the lot of the user so is
+    userId: req.session.loggedInUser
+  })
+    .then((recipes) => {
+      res.render('users/userRecipe', {recipes})
+      console.log("the recipes", recipes)
+          
         })
-        .then((users) => {
-          res.render('users/userRecipe', {
-            recipes
-          })
-        })
-    })
+        .catch((error) => 
+        console.log('doesnt work', error)
+        )
 });
 
 //call the API and ask for all of the recipes of the logged in user
