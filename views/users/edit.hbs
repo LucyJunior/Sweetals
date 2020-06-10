@@ -12,34 +12,28 @@
   </html>
 
 
-  <form method="POST" action="/flowerInfo/{{flowerId}}/newRecipe">
+  <form method="GET" action="/newRecipe/{{recipe._id}}/finalRecipe">
   <label for="title">Title</label>
-  <input type="text" name="title"
+  <input value="{{recipe.title}}" type="text" name="title"
     id="title">
 
   <label for="cookingTime">Cooking
     Time</label>
-  <input type="number"
+  <input value="{{recipe.cookingTime}}" type="number"
     name="cookingTime" id="cookingTime">
 
   <label for="numberOfPeople">Number of
     people</label>
-  <input type="number"
+  <input value="{{recipe.numberOfPeople}}" type="number"
     name="numberOfPeople"
     id="numberOfPeople" min="1">
 
   <label
-    for="description">recipe</label>
-  <textarea name="description" rows="10"
+    for="preparation">recipe</label>
+  <input value="{{recipe.preparation}}" name="preparation" rows="10"
     cols="30"
-    placeholder="Your recipe here"></textarea>
+    placeholder="Your recipe here"></input>
   {{!-- //when the user submits this form, how will we pass the flower details ? --}}
 
-  <button type="submit">Save</button>
+  <a href="/flowerInfo/{{flower._id}}/newRecipe"></a><button type="submit">Save</button>
 </form>
-
-{{#if userData}}
-
-<p>Hello {{userData.username}}</p>
-
-{{/if}}

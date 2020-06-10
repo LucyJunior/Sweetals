@@ -31,6 +31,7 @@ router.get('/:id/delete', (req, res) => {
     .then((recipe) => {
       console.log("recipe to delete", recipe)
       if (req.session.loggedInUser._id == recipe.userId) {
+        console.log('yaaaay')
         RecipeModel.findByIdAndDelete(req.params.id)
           .then((recipe) => {
             console.log(`recipe ${recipe.title} deleted`)

@@ -19,7 +19,7 @@
   <img src="{{flower.img}}">
 
 {{#each recipes}}
-<p>{{this.title}}</p>
+<a href="/finalRecipe/{{this._id}}"><p>{{this.title}}</p></a>
 {{/each}}
  <a href="/flowerInfo/{{flower._id}}/newRecipe"><button>Add a Recipe</button></a> 
 

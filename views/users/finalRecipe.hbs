@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{title}}</title>
-  <link rel="stylesheet" href="/stylesheets/style.css" />
-</head>
-
- <nav>
+   <nav>
     <ul>
       <li id="to-right"></li>
       <a href="/flowerList">List of flowers</a> <span> | </span>
@@ -18,22 +7,20 @@
       <li id="to-right"></li>
       <a href="/userRecipe">My recipes</a> <span> | </span>
       </li>
-
-       <li id="to-right"></li>
-      <a href="/myRecipes">Recipe Steps</a> <span> | </span>
-      </li>
-
     </ul>
   </nav>
-  </html>
+ 
 
  <h3>{{recipe.title}}</h3> 
- <p></p>
+ <p>{{recipe.cookingTime}}</p>
+ <p>{{recipe.numberOfPeople}}</p>
+ <p>{{recipe.preparation}}</p>
 
 {{#if ownerBoolean}}
 <a href = "/finalRecipe/{{recipe._id}}/delete">Delete</a>
-
 {{/if}}
 
+{{#if ownerBoolean}}
 <a href = "/edit/{{recipe._id}}"><button >Edit</button>
 </a>
+{{/if}}
