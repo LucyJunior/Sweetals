@@ -22,6 +22,8 @@ const flowerListRouter = require('./routes/flowerList.routes');
 const newRecipeRouter = require('./routes/newRecipe.routes');
 const userRecipeRouter = require ('./routes/userRecipe.routes');
 const flowerInfoRouter = require ('./routes/flowerInfo.routes');
+const finalRecipeRouter = require ('./routes/finalRecipe.routes');
+
 
 const app = express();
 
@@ -75,7 +77,7 @@ app.use('/flowerList', flowerListRouter);
 app.use('/newRecipe', newRecipeRouter);
 app.use('/userRecipe', userRecipeRouter);
 app.use('/flowerInfo', flowerInfoRouter);
-
+app.use('/finalRecipe',finalRecipeRouter);
 
 
 module.exports = app;

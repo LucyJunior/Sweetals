@@ -1,5 +1,5 @@
 
-  <nav>
+ <nav>
     <ul>
       <li id="to-right"></li>
       <a href="/flowerList">List of flowers</a> <span> | </span>
@@ -12,8 +12,13 @@
       <li id="to-right"></li>
       <a href="/flowerInfo">Recipes with this flower</a> <span> | </span>
       </li>
+
+      <li id="to-right"></li>
+      <a href="/finalRecipe">Recipe Steps</a> <span> | </span>
+      </li>
     </ul>
   </nav>
+
   {{{body}}}
 
  {{!-- here we need to create  a loop with #each to show the list of recipe saved in : newRecip.hbs, link to userData --}}
@@ -21,7 +26,7 @@
 
 <div>
  {{#each recipe}}
-  <h3>Title : {{this.title}}</h3>
+ <a href="/finalRecipe" Title : {{this.title}}></a>
 {{/each}}
 
 </div>

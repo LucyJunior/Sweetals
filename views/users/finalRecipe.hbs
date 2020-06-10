@@ -1,4 +1,15 @@
-<nav>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+ <nav>
     <ul>
       <li id="to-right"></li>
       <a href="/flowerList">List of flowers</a> <span> | </span>
@@ -15,21 +26,9 @@
       <li id="to-right"></li>
       <a href="/finalRecipe">Recipe Steps</a> <span> | </span>
       </li>
-
-      
     </ul>
   </nav>
 
-{{#each flowers}}
-  <h3>Name : {{this.name}} </h3>
-  <p>Family: {{this.family}} </p>
- <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
-{{/each}}
-
-{{#if userData}}
-
-<p>Hello {{userData.username}}</p>
-
-{{/if}}
- 
-
+  
+  </html>
+  
