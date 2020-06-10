@@ -1,0 +1,26 @@
+  <nav>
+    <ul>
+      <li id="to-right"></li>
+      <a href="/flowerList">List of flowers</a> <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/newRecipe">Make your own recipe</a> <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/userRecipe">My favorite recipes</a> <span> | </span>
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/flowerInfo">Recipes with this flower</a> <span> | </span>
+      </li>
+    </ul>
+  </nav> 
+
+  <div>
+
+ {{#each recipe}}
+  <h3>Title : {{recipe.title}}</h3>
+{{/each}}
+</div>
