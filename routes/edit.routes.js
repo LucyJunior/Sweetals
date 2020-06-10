@@ -4,8 +4,8 @@ const router = express.Router();
 let RecipeModel = require('../models/Recipe.model')
 
 
-router.get('/:id/edit', (req, res, next) => {
-  DronesModel.findById(req.params.id)
+router.get('/:id', (req, res, next) => {
+  Model.findById(req.params.id)
     .then((response) => {
       console.log("response", response)
       res.render('../edit', {
@@ -20,11 +20,11 @@ router.get('/:id/edit', (req, res, next) => {
     })
 });
 
-router.post('/:id/edit', (req, res, next) => {
+router.post('/:id', (req, res, next) => {
   // Update here
 
   let id = req.params.id
-  DronesModel.findByIdAndUpdate(id, {
+  Model.findByIdAndUpdate(id, {
       $set: {
         title: req.body.title,
         numberOfPeople: req.body.numberOfPeople,
@@ -43,28 +43,8 @@ router.post('/:id/edit', (req, res, next) => {
 
 });
 
-router.post('/drones/:id/delete', (req, res, next) => {
-  let id = req.params.id
-  DronesModel.findByIdAndDelete()(id, {
-      $set: {
-        title: req.body.title,
-        numberOfPeople: req.body.numberOfPeople,
-        ingredients: req.body.ingredients,
-        preparation: req.body.preparation,
-      }
-    })
-    .then(() => {
-      res.redirect('/')
-    })
-    .catch((response) => {
-      res.render('../users/userRecipe.hbs', {
-        response
-      })
-    })
-});
 
 
-module.exports = router;
 
 
 
