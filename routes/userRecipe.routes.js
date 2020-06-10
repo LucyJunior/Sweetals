@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const session = require('express-session')
 
 let RecipeModel = require('../models/Recipe.model')
 // .populate all the recipe in this page
