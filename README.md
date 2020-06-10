@@ -56,9 +56,9 @@ recipe details - By clicking on a recipe in the recipe list the user has acces t
    Steps text
 * GET /userRecipe
     renders userRecipe.hbs
-* GET /flowers-info/:flowerID/:recipeID/edit
+* GET /flowers-info/:flowerID/edit
   renders edit.hbs
-* POST /flowers-info/:flowerID/:recipeID/edit.hbs
+* POST /flowers-info/:flowerID/:RecipeID/edit.hbs
 * POST /flowers/:flowersID/:recipeID/delete
 * GET /logout
 
@@ -76,6 +76,7 @@ FlowerSchema ({ name: String,
 family: String,
 description: String
 })
+
 Recipe ({ title: String, required: true, minlength: 6, maxlength: 10,
 Cooking time: Number, required true,
 Number of people : Number, required: true,

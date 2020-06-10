@@ -34,6 +34,7 @@ router.post('/:id/newRecipe', (req, res) => {
   FlowerModel.findById(req.params.id)
    .then((flower) => {
     RecipeModel.create({
+      userId: req.session.loggedInUser,
       flowerId: flower._id,
       title : title,
       cookingTime: cookingTime,
@@ -48,11 +49,9 @@ router.post('/:id/newRecipe', (req, res) => {
       })
       .catch((error) => {
         console.log("error", error)
-        res.render('users/newRecipe')
+        res.redirect(`/flowerInfo/${flower._id}/newRecipe`)
       })
    })
-
-
 })
 
 

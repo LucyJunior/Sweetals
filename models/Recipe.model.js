@@ -3,6 +3,12 @@ const mongoose = require('mongoose');
 
 const RecipeSchema = new mongoose.Schema(
   {
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref:'User',
+      required: true,
+    },
+
     flowerId: {
       type: mongoose.Schema.Types.ObjectId
    },
@@ -43,6 +49,6 @@ const RecipeSchema = new mongoose.Schema(
     }
 );
 
-let RecipeModel = mongoose.model('Recipe', RecipeSchema);
+const  RecipeModel = mongoose.model('Recipe', RecipeSchema);
 
 module.exports = RecipeModel;

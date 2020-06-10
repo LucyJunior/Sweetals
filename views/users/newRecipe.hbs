@@ -52,13 +52,17 @@
     placeholder="Your recipe here"></textarea>
   {{!-- //when the user submits this form, how will we pass the flower details ? --}}
 
-  <a href="/newRecipe/{{userData}}/userRecipe"></a> 
+  {{!--<a href="/newRecipe/{{userData}}/userRecipe"></a> --}}
   <button type="submit">Save</button>
 </form>
 
-{{#if userData}}
-
-<p>Hello {{userData.username}}</p>
-
+{{!--new--}}
+<div>
+{{#if showSuccessMessage}}
+<p>You create a recipe!</p>
 {{/if}}
 
+{{#if showFailureMessage}}
+<p>Something went wrong dude<p>
+{{/if}}
+</div>

@@ -31,16 +31,15 @@ router.post('/', (req, res, next) => {
     ingredients : ingredients,
     preparation : preparation,
     })
-    .then(() => {
-      res.redirect('/userRecipe')
+    .then((response) => {
+      res.redirect('/userRecipe', {showSuccessMessage: true})
       //because it's redirect I need the slash before
 
     })
     .catch((error) => {
-      console.log("error", error)
-      res.render('users/newRecipe')
+      console.log(error)
+      res.render('newRecipe.hbs', {showFailureMessage: true})
     })
-
 });
 
 module.exports = router;
