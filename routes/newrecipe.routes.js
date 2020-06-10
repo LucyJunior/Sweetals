@@ -3,7 +3,7 @@ const router = express.Router();
 
 let RecipeModel = require ('../models/Recipe.model')
 let FlowerModel = require ('../models/Flower.model')
-let UserModel = require ('../models/User.model')
+
 
 
 router.get('/', (req, res, next) => {
@@ -16,47 +16,33 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  const {
-    title,
-    cookingTime,
-    numberOfPeople,
-    ingredients,
-    preparation,
+  const { title, cookingTime, numberOfPeople, ingredients, preparation} = req.body;
 
-  } = req.body;
   RecipeModel.create({
-    flowerId: flowerId,
-    title : title,
-    cookingTime: cookingTime,
-    numberOfPeople :numberOfPeople,
-    ingredients : ingredients,
-    preparation : preparation,
-    })
-    .then(() => {
-      res.redirect('/userRecipe')
+    flowerId: flowerId, title : title, cookingTime: cookingTime, numberOfPeople :numberOfPeople, ingredients : ingredients, preparation : preparation})
+    .then((response) => {
+      res.redirect('userRecipe.hbs', {showSuccessMessage: true})
       //because it's redirect I need the slash before
 
     })
-    .catch((error) => {
+    .catch(() => {
       console.log("error", error)
-      res.render('users/newRecipe')
+      res.render('newRecipe.hbs', {showFailureMessage:true})
     })
-
 });
-router.get('/:id/newRecipe', (req, res) => {
-  console.log('id is', req.params.id)
-  res.render('users/newRecipe.hbs', {flowerId: req.params.id});
-})
 
 
 
-router.get('/:id', (req, res, next) => {
-  console.log('it s working')
-  UserModel.findById(req.params.id)
-  .then((userData) => {
-          res.render('users/newRecipe',{userData})
-        })
-});
+
+
+
+// router.get('/:id', (req, res, next) => {
+//   console.log('it s working')
+//   UserModel.findById(req.params.id)
+//   .then((userData) => {
+//           res.render('users/newRecipe',{userData})
+//         })
+// });
 
 
 

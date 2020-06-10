@@ -18,13 +18,17 @@
     </ul>
   </nav>
 
-{{#each userData}}
-  <h3>Name : {{this.name}} </h3>
+
+{{!--4loop to show all the recipes*/ --}}
+
+<div>
+{{#each recipes}}
+  <h3>title : {{this.title}} </h3>
   {{/each}}
-  
+</div>
 
  {{!-- here we need to create  a loop with #each to show the list of recipe saved in : newRecip.hbs, link to userData --}}
- 
+{{!--  
  {{#each recipe}}
   <h3>Title : {{this.title}}</h3>
 {{/each}}
@@ -34,4 +38,4 @@
 
 <p>Hello {{userData.username}}</p>
 
-{{/if}}
+{{/if}} --}}

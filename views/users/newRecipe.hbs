@@ -30,6 +30,8 @@
     </ul>
   </nav>
 
+<div>
+  {{!--Post method to submit the form--}}
 <form method="POST" action="/flowerInfo/{{flowerId}}/newRecipe">
   <label for="title">Title</label>
   <input type="text" name="title"
@@ -53,13 +55,16 @@
     placeholder="Your recipe here"></textarea>
   {{!-- //when the user submits this form, how will we pass the flower details ? --}}
 
-  <a href="/newRecipe/{{userData}}/userRecipe"></a> 
+ {{!-- <a href=""></a> --}}
   <button type="submit">Save</button>
 </form>
 
-{{#if userData}}
+{{!--new--}}
 
-<p>Hello {{userData.username}}</p>
-
+{{#if showSuccessMessage}}
+<p>You create a recipe!</p>
 {{/if}}
-
+{{#if showFailureMessage}}
+<p>Something went wrong dude<p>
+{{/if}}
+</div>
