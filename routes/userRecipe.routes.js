@@ -7,7 +7,7 @@ let RecipeModel = require('../models/Recipe.model')
 
 router.get('/', (req, res) => {
   console.log('userRecipe route is working')
-  RecipeModel.find ({userId : req.session.loggedInUser})
+  RecipeModel.find({userId : req.session.loggedInUser})
     .then((recipes) => {
       res.render('users/userRecipe',{recipes})
    console.log("the recipes", recipes)
