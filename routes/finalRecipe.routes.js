@@ -44,6 +44,7 @@ router.get('/:id/delete', (req, res) => {
 
 });
 
+module.exports = router;
 
 
 // res.render('users/finalRecipe'));
