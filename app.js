@@ -78,6 +78,6 @@ app.use('/newRecipe', newRecipeRouter);
 app.use('/userRecipe', userRecipeRouter);
 app.use('/flowerInfo', flowerInfoRouter);
 app.use('/finalRecipe',finalRecipeRouter);
-app.use ('/edit',editRouter);
+app.use('/edit',editRouter);
 
 module.exports = app;

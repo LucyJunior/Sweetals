@@ -4,27 +4,22 @@ const router = express.Router();
 let RecipeModel = require('../models/Recipe.model')
 
 
-router.get('/:id', (req, res, next) => {
-  Model.findById(req.params.id)
-    .then((response) => {
-      console.log("response", response)
-      res.render('../edit', {
-        response
-      })
-
+router.get('/:id', (req, res) => {
+  RecipeModel.findById(req.params.id)
+  // get all info from  the recipe , then render new page with info
+    .then((recipe) => {
+   res.render('users/edit',{recipe})
     })
-    .catch(() => {
-      res.status(400)
-      res.send('Oups!Not working!')
-
+    .catch((error) => {
+      res.send('Oups!Not working!', error)
     })
 });
 
-router.post('/:id', (req, res, next) => {
+router.post('/:id', (req, res) => {
   // Update here
 
   let id = req.params.id
-  Model.findByIdAndUpdate(id, {
+  RecipModel.findByIdAndUpdate(id, {
       $set: {
         title: req.body.title,
         numberOfPeople: req.body.numberOfPeople,

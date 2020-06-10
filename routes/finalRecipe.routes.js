@@ -21,16 +21,25 @@ router.get('/:id', (req, res) => {
 router.get('/:id/delete', (req, res) => {
   RecipeModel.findById(req.params.id)
     .then((recipe) => {
+      console.log("recipe to delete", recipe)
       if (req.session.loggedInUser === recipe.userId) {
         RecipeModel.findByIdAndDelete(req.params.id)
-          .then(() => {
+          .then((recipe) => {
+            console.log(`recipe ${recipe.title} deleted`)
             res.redirect('/userRecipe')
           })
           .catch((error) => {
             console.log('delete not working', error)
             res.redirect('/userRecipe')
           })
+      } else { 
+        console.log("users don't match, can't delete") 
+        res.redirect('/userRecipe')
       }
+    })
+    .catch((error) => {
+      console.log('delete not working', error)
+      res.redirect('/userRecipe')
     })
 
 });
