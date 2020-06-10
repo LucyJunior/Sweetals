@@ -76,6 +76,7 @@ FlowerSchema ({ name: String,
 family: String,
 description: String
 })
+
 Recipe ({ title: String, required: true, minlength: 6, maxlength: 10,
 Cooking time: Number, required true,
 Number of people : Number, required: true,

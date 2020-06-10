@@ -2,35 +2,52 @@ const express = require ('express');
 const router = express.Router();
 const session = require ('express-session')
 
-let FlowerModel = require ('../models/Flower.model')
-
 // .populate all the recipe in this page
 
-let RecipeModel = require('../models/Recipe.model')
+router.get('/',(req,res) => {
+  //call the API and ask for all of the recipes of the logged in user
 
-router.get('/',(req,res) => res.render('users/userRecipe', {title:'boum'}) )
+  res.render('users/userRecipe', {recipes})
+  //inside the then you put the line above
+  //2-object you pass to the render
 
-router.get('userRecipe/:id', (req,res) => {
+}) 
 
-  RecipeModel.findById(req.params.myId)
-  .then((recipes) => {
-    res.render('', {recipes})
-  })
-  .catch(() => {
-    res.send('Something went wrong')
-  })
-})
 
-// router.post('/drones/:id/delete', (req, res, next) => {
-//   RecipeModel.findByIdAndDelete(req.params.id)
+
+
+
+
+
+
+
+//new
+
+// router.get('/newRecipe/:id/add', (req, res) => {
+//   const { id } = req.params;
+//   const user = req.session.loggedInUser;
+//     UserModel.findById({ userId: user._id})
+//     .then((recipes) => {
+//       if (!response.length) {
+//         UserModel.create({userId: user.id,  [{ id }] });
+//       } else {
+//         UserModel.updateOne(
+//           {userId : user.id},
+//           {$push: {  [{ id }] }},
+//     )
 //     .then(() => {
-//       res.redirect('/userRecipe')
+//       res.send('not working');
 //     })
-//     .catch((response) => {
-//       res.send('Something went wrong' {
-//         response
-//       })
-//     })
-// });
+//     .catch((err) => {
+//       res.send('something went wrong');
+    
+//     });
+//   }
+// })
+//     .catch(() => {
+//       res.send('something went wrong');
+    
+//     });
+//   })
 
-module.exports = router; 
+module.exports = router;

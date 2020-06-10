@@ -5,7 +5,6 @@ let RecipeModel = require ('../models/Recipe.model')
 let FlowerModel = require ('../models/Flower.model')
 
 
-
 router.get('/', (req, res, next) => {
   // i will pass all the info from flower list here, with .find() flowers
   FlowerModel.find()
@@ -16,34 +15,31 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  const { title, cookingTime, numberOfPeople, ingredients, preparation} = req.body;
+  const {
+    title,
+    cookingTime,
+    numberOfPeople,
+    ingredients,
+    preparation,
 
+  } = req.body;
   RecipeModel.create({
-    flowerId: flowerId, title : title, cookingTime: cookingTime, numberOfPeople :numberOfPeople, ingredients : ingredients, preparation : preparation})
+    flowerId: flowerId,
+    title : title,
+    cookingTime: cookingTime,
+    numberOfPeople :numberOfPeople,
+    ingredients : ingredients,
+    preparation : preparation,
+    })
     .then((response) => {
-      res.redirect('userRecipe.hbs', {showSuccessMessage: true})
+      res.redirect('/userRecipe', {showSuccessMessage: true})
       //because it's redirect I need the slash before
 
     })
-    .catch(() => {
-      console.log("error", error)
-      res.render('newRecipe.hbs', {showFailureMessage:true})
+    .catch((error) => {
+      console.log(error)
+      res.render('newRecipe.hbs', {showFailureMessage: true})
     })
 });
-
-
-
-
-
-
-// router.get('/:id', (req, res, next) => {
-//   console.log('it s working')
-//   UserModel.findById(req.params.id)
-//   .then((userData) => {
-//           res.render('users/newRecipe',{userData})
-//         })
-// });
-
-
 
 module.exports = router;

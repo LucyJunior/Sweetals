@@ -1,11 +1,8 @@
- <nav>
+
+  <nav>
     <ul>
       <li id="to-right"></li>
       <a href="/flowerList">List of flowers</a> <span> | </span>
-      </li>
-
-      <li id="to-right"></li>
-      <a href="/newRecipe">Make your own recipe</a> <span> | </span>
       </li>
 
       <li id="to-right"></li>
@@ -17,25 +14,16 @@
       </li>
     </ul>
   </nav>
-
-
-{{!--4loop to show all the recipes*/ --}}
-
-<div>
-{{#each recipes}}
-  <h3>title : {{this.title}} </h3>
-  {{/each}}
-</div>
+  {{{body}}}
 
  {{!-- here we need to create  a loop with #each to show the list of recipe saved in : newRecip.hbs, link to userData --}}
-{{!--  
+ {{!--4loop to show all the recipes*/ --}}
+
+<div>
  {{#each recipe}}
   <h3>Title : {{this.title}}</h3>
 {{/each}}
 
+</div>
+
 <div>new recipe page!!</div>
-{{#if userData}}
-
-<p>Hello {{userData.username}}</p>
-
-{{/if}} --}}
