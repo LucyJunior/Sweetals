@@ -1,11 +1,18 @@
-  <nav>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+ <nav>
     <ul>
       <li id="to-right"></li>
       <a href="/flowerList">List of flowers</a> <span> | </span>
-      </li>
-
-      <li id="to-right"></li>
-      <a href="/newRecipe">Make your own recipe</a> <span> | </span>
       </li>
 
       <li id="to-right"></li>
@@ -15,12 +22,13 @@
       <li id="to-right"></li>
       <a href="/flowerInfo">Recipes with this flower</a> <span> | </span>
       </li>
+
+      <li id="to-right"></li>
+      <a href="/finalRecipe">Recipe Steps</a> <span> | </span>
+      </li>
     </ul>
-  </nav> 
+  </nav>
 
-  <div>
-
- {{#each recipe}}
-  <h3>Title : {{recipe.title}}</h3>
-{{/each}}
-</div>
+  
+  </html>
+  

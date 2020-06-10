@@ -1,17 +1,31 @@
-const express = require ('express');
+const express = require('express');
 const router = express.Router();
-const session = require ('express-session')
+const session = require('express-session')
 
+let RecipeModel = require('../models/Recipe.model')
 // .populate all the recipe in this page
 
-router.get('/',(req,res) => {
-  //call the API and ask for all of the recipes of the logged in user
+router.get('/:id', (req, res) => {
+  console.log('userRecipe route is working')
+  RecipeModel.findById(req.params.id)
+    .then((recipe) => {
+      UserModel.find({
+          recipeId: recipe._id
+        })
+        .then((users) => {
+          res.render('users/userRecipe', {
+            recipes
+          })
+        })
+    })
+});
 
-  res.render('users/userRecipe', {recipes})
-  //inside the then you put the line above
-  //2-object you pass to the render
+//call the API and ask for all of the recipes of the logged in user
 
-}) 
+//inside the then you put the line above
+//2-object you pass to the render
+
+
 
 
 
@@ -40,13 +54,13 @@ router.get('/',(req,res) => {
 //     })
 //     .catch((err) => {
 //       res.send('something went wrong');
-    
+
 //     });
 //   }
 // })
 //     .catch(() => {
 //       res.send('something went wrong');
-    
+
 //     });
 //   })
 
