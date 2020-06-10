@@ -1,20 +1,39 @@
 const express = require('express');
 const router = express.Router();
 
-let RecipeModel = require ('../models/Recipe.model')
+let RecipeModel = require('../models/Recipe.model')
 
 
 router.get('/:id', (req, res) => {
-RecipeModel.findById(req.params.id)
-.then((recipe) => {
-  // let recipe = "whatever you got from the promise"
-  res.render('users/finalRecipe',{recipe})
-  //render = you point to an hbs files you want to show in the browser. "redirect", I manualy change the URL where the user will be send
-})
-.catch((error)=>{
-  console.log("not working recipe routes", error)
-     })
- });
+  RecipeModel.findById(req.params.id)
+    .then((recipe) => {
+      // let recipe = "whatever you got from the promise"
+      res.render('users/finalRecipe', {
+        recipe
+      })
+      //render = you point to an hbs files you want to show in the browser. "redirect", I manualy change the URL where the user will be send
+    })
+    .catch((error) => {
+      console.log("not working recipe routes", error)
+    })
+});
+
+router.get('/:id/delete', (req, res) => {
+  RecipeModel.findById(req.params.id)
+    .then((recipe) => {
+      if (req.session.loggedInUser === recipe.userId) {
+        RecipeModel.findByIdAndDelete(req.params.id)
+          .then(() => {
+            res.redirect('/userRecipe')
+          })
+          .catch((error) => {
+            console.log('delete not working', error)
+            res.redirect('/userRecipe')
+          })
+      }
+    })
+
+});
 
 
 
