@@ -19,16 +19,16 @@
     </ul>
   </nav>
 
-  {{{body}}}
-
  {{!-- here we need to create  a loop with #each to show the list of recipe saved in : newRecip.hbs, link to userData --}}
  {{!--4loop to show all the recipes*/ --}}
 
 <div>
- {{#each recipe}}
- <a href="/finalRecipe" Title : {{this.title}}></a>
+ {{#each recipes}}
+ <a href="/finalRecipe/{{this._id}}">Title : {{this.title}}</a>
 {{/each}}
 
 </div>
 
 <div>new recipe page!!</div>
+
+
