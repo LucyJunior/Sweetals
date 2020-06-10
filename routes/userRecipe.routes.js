@@ -7,19 +7,16 @@ let RecipeModel = require('../models/Recipe.model')
 
 router.get('/', (req, res) => {
   console.log('userRecipe route is working')
-  RecipeModel.find({
+  RecipeModel.find ({userId : req.session.loggedInUser})
   //give me all the values id which user is equal to 
         //so if you wanna get the lot of the user so is
-    userId: req.session.loggedInUser
-  })
     .then((recipes) => {
-      res.render('users/userRecipe', {recipes})
-      console.log("the recipes", recipes)
-          
-        })
-        .catch((error) => 
-        console.log('doesnt work', error)
-        )
+      res.render('users/userRecipe',{recipes})
+   console.log("the recipes", recipes)
+    })
+    .catch((error)=>{
+ console.log("not working recipe routes", error)
+    })
 });
 
 //call the API and ask for all of the recipes of the logged in user
