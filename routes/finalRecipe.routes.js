@@ -7,9 +7,17 @@ let RecipeModel = require('../models/Recipe.model')
 router.get('/:id', (req, res) => {
   RecipeModel.findById(req.params.id)
     .then((recipe) => {
+      let ownerBoolean = false
+
+      if(req.session.loggedInUser._id == recipe.userId){
+        ownerBoolean = true
+      }
+      console.log(req.session.loggedInUser._id, recipe.userId, ownerBoolean)
+
       // let recipe = "whatever you got from the promise"
       res.render('users/finalRecipe', {
-        recipe
+        recipe,
+        ownerBoolean,
       })
       //render = you point to an hbs files you want to show in the browser. "redirect", I manualy change the URL where the user will be send
     })
@@ -22,7 +30,7 @@ router.get('/:id/delete', (req, res) => {
   RecipeModel.findById(req.params.id)
     .then((recipe) => {
       console.log("recipe to delete", recipe)
-      if (req.session.loggedInUser === recipe.userId) {
+      if (req.session.loggedInUser._id == recipe.userId) {
         RecipeModel.findByIdAndDelete(req.params.id)
           .then((recipe) => {
             console.log(`recipe ${recipe.title} deleted`)
