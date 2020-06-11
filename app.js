@@ -18,8 +18,8 @@ require('./configs/db.config');
 // Routers
 const indexRouter = require('./routes/index.routes');
 const authRouter = require('./routes/auth.routes');
-const flowerListRouter = require('./routes/flowerList.routes');
-const newRecipeRouter = require('./routes/newRecipe.routes');
+const flowerListRouter = require('./routes/flowerlist.routes');
+const newRecipeRouter = require('./routes/newrecipe.routes');
 const userRecipeRouter = require ('./routes/userRecipe.routes');
 const flowerInfoRouter = require ('./routes/flowerInfo.routes');
 const finalRecipeRouter = require ('./routes/finalRecipe.routes');

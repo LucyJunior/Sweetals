@@ -8,7 +8,9 @@ router.get('/', (req, res) => {
   FlowerModel.find()
   .then((flowers) => {
     console.log(flowers)
-    res.render('users/flowerList',{flowers})
+    res.render('users/flowerlist',{
+      flowers
+    })
   })
 });
 
