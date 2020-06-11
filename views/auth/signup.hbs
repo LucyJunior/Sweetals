@@ -1,14 +1,26 @@
-
+<div class="signup"></div>
 
 <form method="POST" action="../signup">
-<label for="username">Username</label>
-<input type="text" name="username" id="username">
-<label for="user-email">Email</label>
-<input type="email" name="email" id="email">
-<label for="user-pass">Password</label>
-<input type="password" name="password" id="password">
-<button type="submit">Sign Up</button>
 
+<div class="signupUsername">
+<label for="username" placeholder="Username"></label>
+</div>
+<input type="text" name="username" id="username">
+
+<div class="signupEmail"> 
+<label for="user-email" placeholder="Email"></label>
+</div>
+<input type="email" name="email" id="email">
+
+<div class="signupPassword"> 
+<label for="user-pass" placeholder="Password"></label>
+</div>
+<input type="password" name="password" id="password">
+
+<div class="signupButton">
+<button type="submit">Sign Up</button>
+</div>
+</div>
 
 {{#if errorMessage}}
   <div class="error">{{errorMessage}}</div>
