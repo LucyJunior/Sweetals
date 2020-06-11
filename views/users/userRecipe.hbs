@@ -9,10 +9,6 @@
       <a href="/userRecipe">My recipes</a> <span> | </span>
       </li>
 
-       <li id="to-right"></li>
-      <a href="/myRecipes">Recipe Steps</a> <span> | </span>
-      </li>
-
     </ul>
   </nav>
   </html>
@@ -23,10 +19,10 @@
 
 <div>
  {{#each recipes}}
- <a href="/finalRecipe/{{this._id}}">Title : {{this.title}}</a>
+ <a href="/finalRecipe/{{this._id}}">{{this.title}}</a>
 {{/each}}
 </div>
 
-<div>new recipe page!!</div>
+
 
 

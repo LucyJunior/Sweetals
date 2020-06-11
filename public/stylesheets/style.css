@@ -9,6 +9,29 @@
   background-color: yellow;
   }
 
+  .imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flowerImage {
+    padding:20px;
+  }
+
   footer {
     margin-bottom: 0;
+  }
+
+  .recipe:nth-of-type(odd) {
+    display: flex;
+  }
+  .recipe:nth-of-type(even) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .MainTitle{
+
+    text-align: center;
+
   }
