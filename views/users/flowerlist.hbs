@@ -1,17 +1,4 @@
-<nav>
-  <ul>
-    <li id="to-right"></li>
-    <a href="/flowerList">List of flowers</a> <span> | </span>
-    </li>
 
-    <li id="to-right"></li>
-    <a href="/userRecipe">My recipes</a> <span> | </span>
-    </li>
-  </ul>
-</nav>
-
-{{!-- 
-{{{this.img}}  --}}
 
 <div class="MainTitle">
 <h1>[ Edible Flowers ]</h1>
@@ -20,11 +7,12 @@
 
 <div class="imageContainer">
  {{#each flowers}}
- <div class="flowerImage" ="img">
-   <div class="MainTitle"
+ <div class="flowerImage">
+   <div class="MainTitle">
   <h3>{{this.name}} </h3>
   <p>{{this.family}} </p>
   </div>
+  
  <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
  </div>
 {{/each}} 

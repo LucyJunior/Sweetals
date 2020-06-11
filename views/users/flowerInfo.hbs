@@ -1,25 +1,24 @@
-   <nav>
-    <ul>
-      <li id="to-right"></li>
-      <a href="/flowerList">List of flowers</a> <span> | </span>
-      </li>
-
-      <li id="to-right"></li>
-      <a href="/userRecipe">My recipes</a> <span> | </span>
-      </li>
-    </ul>
-  </nav>
-  </html>
-
-
-
+<div class="flowerInfo">
   <h3>Name : {{flower.name}}</h3>
   <p>More about the flower:
     {{flower.description}}</p>
   <img src="{{flower.img}}">
 
-{{#each recipes}}
-<a href="/finalRecipe/{{this._id}}"><p>{{this.title}}</p></a>
-{{/each}}
- <a href="/flowerInfo/{{flower._id}}/newRecipe"><button>Add a Recipe</button></a> 
 
+<h3 class="MainTitle">[ Recipes ]</h3>
+
+  {{#each recipes}}
+  <div class="floweerImage">
+    <p>{{this.title}}</p>
+    <p>{{this.ingredients}}</p>
+  </div>
+  <div class="recipeImg">
+    <img src="{{this.img}}">
+  </div>
+  {{/each}}
+
+  <a
+    href="/flowerInfo/{{flower._id}}/newRecipe"><button>Add
+      a Recipe</button></a>
+
+</div>

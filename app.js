@@ -70,6 +70,7 @@ app.use(express.urlencoded({ extended: true }));
 // helps us use the cookies from each request
 app.use(cookieParser());
 
+
 // Routes middleware
 app.use('/', indexRouter);
 app.use('/', authRouter);

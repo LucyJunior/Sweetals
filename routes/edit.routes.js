@@ -62,6 +62,7 @@ router.post('/:id', (req, res) => {
         numberOfPeople: req.body.numberOfPeople,
         ingredients: req.body.ingredients,
         preparation: req.body.preparation,
+        img : req.body.img,
       }
     })
     .then(() => {

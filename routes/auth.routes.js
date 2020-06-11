@@ -151,6 +151,11 @@ router.post('/signin', (req, res) => {
 
 });
 
+router.get('/logout', (req, res) => {
+  req.session.destroy();
+  res.redirect("/signin")
+}),
+
 router.get('/profile', (req, res) => {
     res.render('users/profile.hbs', {userData: req.session.loggedInUser});
 })

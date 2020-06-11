@@ -1,12 +1,40 @@
+<div class="signin">
 
-<form method="POST" action="/signin">
-    <label for="user-email">Email</label>
-    <input type="email" name="email" id="user-email" >
-    <label for="user-pass">Password</label>
-    <input type="password" name="password" id="user-pass" >
-    <button type="submit" >Sign In</button>
-</form>
+  <form method="POST"
+    action="../signin">
+
+    <div class="signinEmail">
+      <label for="user-email"></label>
+      <input type="email" name="email"
+        id="user-email"
+        placeholder="My email">
+    </div>
+
+    <div class="signinPassword">
+      <label for="user-pass"></label>
+      <input type="password"
+        name="password" id="user-pass"
+        placeholder="My passeword">
+    </div>
+
+    <div class="signinSubmit">
+      <button type="submit"
+        class="butSignin">Sign
+        In</button>
+    </div>
+
+    <div class="createAccount">
+      <a href="/signup"> <button
+          type="button"
+          class="butCreate">Create an
+          account</button> </a>
+    </div>
+  </form>
+
+
+</div>
 
 {{#if errorMessage}}
-  <div class="error">{{errorMessage}}</div>
-{{/if}}  
+<div class="error">{{errorMessage}}
+</div>
+{{/if}}
