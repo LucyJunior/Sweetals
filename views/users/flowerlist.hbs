@@ -1,21 +1,24 @@
- <nav>
-    <ul>
-      <li id="to-right"></li>
-      <a href="/flowerList">List of flowers</a> <span> | </span>
-      </li>
+<nav>
+  <ul>
+    <li id="to-right"></li>
+    <a href="/flowerList">List of flowers</a> <span> | </span>
+    </li>
 
-      <li id="to-right"></li>
-      <a href="/userRecipe">My recipes</a> <span> | </span>
-      </li>
-    </ul>
-  </nav>
-  </html>
+    <li id="to-right"></li>
+    <a href="/userRecipe">My recipes</a> <span> | </span>
+    </li>
+  </ul>
+</nav>
 
 
-{{#each flowers}}
-  <h3>Name : {{this.name}} </h3>
-  <p>Family: {{this.family}} </p>
+
+ {{#each flowers}}
+  <h3>{{this.name}} </h3>
+  <p>{{this.family}} </p>
  <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
-{{/each}}
- 
+{{/each}} 
+</div>
+
+
+
 

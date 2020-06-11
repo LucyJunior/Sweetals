@@ -3,10 +3,12 @@ const router = express.Router();
 
 let RecipeModel = require('../models/Recipe.model')
 
+
 router.get('/:id', (req, res) => {
   RecipeModel.findById(req.params.id)
     .then((recipe) => {
       let ownerBoolean = false
+
       if(req.session.loggedInUser._id == recipe.userId){
         ownerBoolean = true
       }
@@ -27,41 +29,29 @@ router.get('/:id/edit', (req, res) => {
 
   RecipeModel.findById(req.params.id)
     .then((recipe) => {
-      console.log("recipe to delete", recipe)
+      console.log("recipe to edit", recipe)
       if (req.session.loggedInUser._id == recipe.userId) {
         console.log('yaaaay')
         RecipeModel.findByIdAndUpdate(req.params.id)
           .then((recipe) => {
             console.log(`recipe ${recipe.title} updated`)
-            res.render('/edit')
+            res.redirect('/finalRecipe', )
           })
           .catch((error) => {
             console.log('update not working', error)
             res.redirect('/userRecipe')
           })
       } else { 
-        console.log("users don't match, can't delete") 
+        console.log("users don't match, can't update") 
         res.redirect('/userRecipe')
       }
     })
+    
     .catch((error) => {
       console.log('delete not working', error)
       res.redirect('/userRecipe')
     })
-
-
-
-
-
 });
-
-
-
-
-
-
-
-
 
 router.post('/:id', (req, res) => {
   // Update here
@@ -75,7 +65,7 @@ router.post('/:id', (req, res) => {
       }
     })
     .then(() => {
-      res.redirect('/')
+      res.redirect('/userRecipe')
     })
     .catch((response) => {
       res.render('Oops something went wrong', {
@@ -100,3 +90,4 @@ router.post('/:id', (req, res) => {
 
 
 module.exports = router;
+

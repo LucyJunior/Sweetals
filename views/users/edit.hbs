@@ -9,10 +9,10 @@
       </li>
     </ul>
   </nav>
-  </html>
 
 
-  <form method="GET" action="/newRecipe/{{recipe._id}}/finalRecipe">
+
+  <form method="POST" action="/edit/{{recipe._id}}">
   <label for="title">Title</label>
   <input value="{{recipe.title}}" type="text" name="title"
     id="title">
@@ -35,5 +35,5 @@
     placeholder="Your recipe here"></input>
   {{!-- //when the user submits this form, how will we pass the flower details ? --}}
 
-  <a href="/flowerInfo/{{flower._id}}/newRecipe"></a><button type="submit">Save</button>
+  <a href="/finalRecipe/{{recipe._id}}"></a><button type="submit">Save</button>
 </form>
