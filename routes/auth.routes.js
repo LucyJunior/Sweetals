@@ -121,7 +121,7 @@ router.post('/signin', (req, res) => {
                 
                 req.session.loggedInUser = userData;
                 //req.session.greet = 'Hola';
-                res.redirect('/profile', /*{layout: false}*/);
+                res.redirect('/flowerList', /*{layout: false}*/);
               }
               //if passwords do not match
               else {
