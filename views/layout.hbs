@@ -19,14 +19,19 @@
  {{#if userData}}
    <nav>
     <ul>
-      <li id="to-right"></li>
+      <li></li>
       <a href="/flowerList">List of flowers</a> 
       </li>
 
-      <li id="to-right"></li>
+      <li></li>
       <a href="/userRecipe">My recipes</a> 
       </li>
     </ul>
+
+   <li>
+      <a href="/logout"><button class="butLogout">Log out</button> </a>
+    </li>
+    
   </nav>
 
 <p>Hello {{userData.username}}</p>
