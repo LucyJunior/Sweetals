@@ -87,7 +87,7 @@ img :"https://i.imgur.com/lIzrHWk.jpg"
   name: "Borage ",
   family: "Boraginaceae ",
   description: " This blue flower can grow up to three feet tall and has a refreshing taste. Borage shouldn't be dried — instead, it's meant to be eaten fresh and can be an ideal ingredient in salads, or as a garnish in drinks. Borage is often used in pastries and desserts, too — especially the candied variety, which is often a prized ingredient for cake decorators. These small flowers have cucumber-like flavor, Canales describes. Add a few to your ice water, or even freeze them in your ice cubes for a beautiful summer drink.",
-  img :" https://i.mgur.com/pvD4s85.jpg"
+  img :" "
   },
   {
   name: "Pansies ",

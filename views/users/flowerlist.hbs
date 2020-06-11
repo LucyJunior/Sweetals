@@ -10,15 +10,18 @@
   </ul>
 </nav>
 
-
+{{!-- 
+{{{this.img}}  --}}
 
  {{#each flowers}}
+ <div id="img">
   <h3>{{this.name}} </h3>
   <p>{{this.family}} </p>
  <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
+ </div>
 {{/each}} 
-</div>
 
+{{!-- src="images/BeeBalm.jpg" --}}
 
 
 

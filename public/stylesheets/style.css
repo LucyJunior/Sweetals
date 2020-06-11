@@ -1,1 +1,14 @@
 
+  
+  img{
+  display: inline;
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+  }
+
+  footer {
+    margin-bottom: 0;
+  }
