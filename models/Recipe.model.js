@@ -43,6 +43,10 @@ const RecipeSchema = new mongoose.Schema(
       // minlength: 50,
       // maxlength: 300
     },
+  
+    img: {
+    type: String,
+  },
   },
     { 
       timestamps: true

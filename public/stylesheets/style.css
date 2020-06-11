@@ -1,0 +1,35 @@
+/* Media screen for : IPhone 6+, 7+, 8+ PLUS */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #c6004d;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+
+/* @media only screen
+and (min-device-width: 414px) and (max-device-width: 736px)
+{
+} */
+ 
+
+/* ----------- FLOWERINFO ----------- */
+
+.flowerInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipe:nth-of-type(odd) {
+  display: flex;
+}
+.recipe:nth-of-type(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}

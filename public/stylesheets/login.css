@@ -12,12 +12,12 @@ a {
 }
 
 
-@media only screen
+/* @media only screen
 and (min-device-width: 414px) and (max-device-width: 736px)
 {
+} */
 
-}
-/* ------- PROFIL  -------- */
+/* ------- INDEX  -------- */
 
 .index {
   display: flex;
@@ -48,29 +48,26 @@ ul {
   list-style-type: none;
 }
 
- button{
+ .butSignin , .butSignup{
    border: 2px solid #c6004d;
    background-color: rgba(255, 255, 255,0.5) ;
    border-radius: 10px;
    font-size: 24px;
    color:  #c6004d;
-   padding: 10px 35px ;
+   padding: 10px 120px ;
    cursor: pointer;
+   margin: 40px;
  }
 
  button:hover{
   background-color: rgba(255, 255, 255,0.7);
  }
+ 
 
-
- .signup{
-   display: inline-block;
-   margin: 30px 0 120px 0;}   
-
-/* ------- End PROFIL   -------- */
+/* ------- End INDEX   -------- */
 
 /* ------- SIGNIN   -------- */
-.signin {
+.signin , .signup {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,52 +81,41 @@ ul {
 .signinEmail{
 margin-top: 300px;
 }
-.signinPassword{
-margin:30PX 0 ;
-}
-.signinSubmit{
-  padding-top: 70px;
+
+input[type = email] ,[type = password],[type = text] {
+  border: 2px solid #c6004d;
+  background-color: rgba(255, 255, 255,0.5) ;
+  font-size: 24px;
+  color:  #c6004d;
+  padding: 10px 35px ;
+  margin: 30px;
 }
 
-input[type = email] ,  [type = password]{
+.butCreate{
   border: 2px solid #c6004d;
   background-color: rgba(255, 255, 255,0.5) ;
   border-radius: 10px;
   font-size: 24px;
   color:  #c6004d;
-  padding: 10px 35px ;
-
+  padding: 10px 60px ;
+  cursor: pointer;
 }
-
 /* ------- End SIGNIN   -------- */
 
 /* ------- SIGNUP   -------- */
-.signup{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: url("../images/profil_bg.jpg");
-  background-repeat:no-repeat;
-  width: 100vw;
-  height: 100vh;
-  background-size:cover;
-  text-align: center;
-}
 
-/* 
+
 .signupUsername{
-margin-top: 300px;
-}
-.signupPassword{
-margin:30PX 0 ;
+margin-top: 100px;
 }
 
-.signupButton{
-  padding-top: 70px;
-} */
+.error{
+  font-size: 30px;
+  margin-top: 60px;
+  background-color: rgba(255, 255, 255,0.5) ;
+  color:  #c6004d;
 
-
-
+}
 
 /* ------- End SIGNUP   -------- */
 

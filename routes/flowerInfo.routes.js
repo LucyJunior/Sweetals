@@ -35,7 +35,7 @@ router.post('/:id/newRecipe', (req, res) => {
     numberOfPeople,
     ingredients,
     preparation,
-
+    img,
   } = req.body;
 
   FlowerModel.findById(req.params.id)
@@ -48,6 +48,7 @@ router.post('/:id/newRecipe', (req, res) => {
           numberOfPeople: numberOfPeople,
           ingredients: ingredients,
           preparation: preparation,
+          img :img,
         })
         .then(() => {
           res.redirect('/userRecipe')

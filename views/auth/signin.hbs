@@ -1,28 +1,36 @@
 <div class="signin">
 
-  <form method="POST" action="/signin">
+  <form method="POST"
+    action="../signin">
 
     <div class="signinEmail">
-      <label
-        for="user-email"></label>
+      <label for="user-email"></label>
+      <input type="email" name="email"
+        id="user-email"
+        placeholder="My email">
     </div>
-
-    <input type="email" name="email"
-      id="user-email" placeholder="My email">
 
     <div class="signinPassword">
-      <label
-        for="user-pass"></label>
+      <label for="user-pass"></label>
+      <input type="password"
+        name="password" id="user-pass"
+        placeholder="My passeword">
     </div>
 
-    <input type="password"
-      name="password" id="user-pass" placeholder="My passeword">
-
     <div class="signinSubmit">
-      <button type="submit">Sign
+      <button type="submit"
+        class="butSignin">Sign
         In</button>
+    </div>
+
+    <div class="createAccount">
+      <a href="/signup"> <button
+          type="button"
+          class="butCreate">Create an
+          account</button> </a>
+    </div>
   </form>
-</div>
+
 
 </div>
 

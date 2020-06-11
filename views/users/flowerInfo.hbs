@@ -1,11 +1,21 @@
-
+<div class="flowerInfo">
   <h3>Name : {{flower.name}}</h3>
   <p>More about the flower:
     {{flower.description}}</p>
   <img src="{{flower.img}}">
 
-{{#each recipes}}
-<p>{{this.title}}</p>
-{{/each}}
- <a href="/flowerInfo/{{flower._id}}/newRecipe"><button>Add a Recipe</button></a> 
+  {{#each recipes}}
+  <div class="recipeText">
+    <p>{{this.title}}</p>
+    <p>{{this.ingredients}}</p>
+  </div>
+  <div class="recipeImg">
+    <img src="{{this.img}}">
+  </div>
+  {{/each}}
 
+  <a
+    href="/flowerInfo/{{flower._id}}/newRecipe"><button>Add
+      a Recipe</button></a>
+
+</div>

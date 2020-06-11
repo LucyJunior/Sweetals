@@ -1,27 +1,46 @@
-<div class="signup"></div>
+<div class="signup">
 
-<form method="POST" action="../signup">
-
-<div class="signupUsername">
-<label for="username" placeholder="Username"></label>
-</div>
-<input type="text" name="username" id="username">
-
-<div class="signupEmail"> 
-<label for="user-email" placeholder="Email"></label>
-</div>
-<input type="email" name="email" id="email">
-
-<div class="signupPassword"> 
-<label for="user-pass" placeholder="Password"></label>
-</div>
-<input type="password" name="password" id="password">
-
-<div class="signupButton">
-<button type="submit">Sign Up</button>
-</div>
-</div>
 
 {{#if errorMessage}}
-  <div class="error">{{errorMessage}}</div>
-{{/if}}  
+<div class="error">{{errorMessage}}
+</div>
+{{/if}}
+
+  <form method="POST"
+    action="../signup">
+
+    <div class="signupUsername">
+      <label for="username"
+        placeholder="Username"></label>
+      <input type="text" name="username"
+        id="username"
+        placeholder="Username">
+    </div>
+
+    <div class="signupEmail">
+      <label for="user-email"></label>
+      <input type="email" name="email"
+        id="user-email"
+        placeholder="My email">
+    </div>
+
+    <div class="signupPassword">
+      <label for="user-pass"></label>
+      <input type="password"
+        name="passeword"
+        placeholder="Passeword">
+    </div>
+
+    <div class="signupButton">
+      <button type="submit"
+        class="butSignup">Sign
+        Up</button>
+    </div>
+
+ <div class="">
+      <a href="/signin"> <button
+          type="button"
+          class="butCreate">I have an account</button> </a>
+    </div>
+
+</div>

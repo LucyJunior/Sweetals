@@ -21,7 +21,7 @@ router.post('/', (req, res, next) => {
     numberOfPeople,
     ingredients,
     preparation,
-
+    imageOfRecipe,
   } = req.body;
   RecipeModel.create({
     flowerId: flowerId,
@@ -30,6 +30,7 @@ router.post('/', (req, res, next) => {
     numberOfPeople :numberOfPeople,
     ingredients : ingredients,
     preparation : preparation,
+    img:img,
     })
     .then((response) => {
       res.redirect('/userRecipe', {showSuccessMessage: true})
