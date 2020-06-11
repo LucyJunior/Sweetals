@@ -1,17 +1,20 @@
 
 
-
-{{#each flowers}}
-  <h3>Name : {{this.name}} </h3>
-  <div class ="flowerFamilyList"><p>Family: {{this.family}} </p></div>
-  <div class="flowerImgList"> <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
+<div class="MainTitle">
+<h1>[ Edible Flowers ]</h1>
+<h3>Pick a flower</h3>
 </div>
-{{/each}}
 
-
-{{#if userData}}
-<p>Hello {{userData.username}}</p>
-
-{{/if}}
- 
-
+<div class="imageContainer">
+ {{#each flowers}}
+ <div class="flowerImage">
+   <div class="MainTitle">
+  <h3>{{this.name}} </h3>
+  <p>{{this.family}} </p>
+  </div>
+  
+ <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
+ </div>
+{{/each}} 
+</div>
+{{!-- src="images/BeeBalm.jpg" --}}

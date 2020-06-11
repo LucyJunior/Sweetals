@@ -4,9 +4,11 @@
     {{flower.description}}</p>
   <img src="{{flower.img}}">
 
+
+ 
   {{#each recipes}}
   <div class="recipeText">
-    <p>{{this.title}}</p>
+    <a href="/finalRecipe/{{this._id}}"><p>{{this.title}}</p></a>
     <p>{{this.ingredients}}</p>
   </div>
   <div class="recipeImg">
@@ -14,8 +16,6 @@
   </div>
   {{/each}}
 
-  <a
-    href="/flowerInfo/{{flower._id}}/newRecipe"><button>Add
-      a Recipe</button></a>
+  <a href="/flowerInfo/{{flower._id}}/newRecipe"><button>Add a Recipe</button></a> 
 
 </div>

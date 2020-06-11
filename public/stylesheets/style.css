@@ -1,3 +1,40 @@
+
+  
+  img{
+  display: inline;
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+  }
+
+  .imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flowerImage {
+    padding:20px;
+  }
+
+  footer {
+    margin-bottom: 0;
+  }
+
+  .recipe:nth-of-type(odd) {
+    display: flex;
+  }
+  .recipe:nth-of-type(even) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .MainTitle{
+
+    text-align: center;
+
+  }
 /* Media screen for : IPhone 6+, 7+, 8+ PLUS */
 
 body {
