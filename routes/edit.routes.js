@@ -67,11 +67,10 @@ router.post('/:id', (req, res) => {
     .then(() => {
       res.redirect('/userRecipe')
     })
-    .catch((response) => {
-      res.render('Oops something went wrong', {
-        response
+    .catch((error) => {
+      console.log('delete not working', error)
+      res.render('error', {title: "sorry, not working"})
       })
-    })
 
 });
 
