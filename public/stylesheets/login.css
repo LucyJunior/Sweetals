@@ -69,14 +69,24 @@ ul {
 .signin {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-image: url("../images/profil_bg.jpg");
   background-repeat:no-repeat;
   width: 100vw;
-  /* relative to the width of my screen, vh is for height */
   height: 100vh;
   background-size:cover;
-  display: inline-block;
+  text-align: center;
 
+}
+.signinEmail{
+margin-top: 300px;
+}
+.signinPassword{
+margin:30PX 0 ;
+}
+
+.signinSubmit{
+  padding-top: 70px;
 }
 
 

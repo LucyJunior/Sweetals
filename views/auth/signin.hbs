@@ -1,20 +1,29 @@
-<div class="signinEmail">
+<div class="signin">
+
   <form method="POST" action="/signin">
-    <label
-      for="user-email">Email</label>
-</div>
-<div class="signinPassword">
+
+    <div class="signinEmail">
+      <label
+        for="user-email">Email</label>
+    </div>
+
     <input type="email" name="email"
       id="user-email">
-    <label
-      for="user-pass">Password</label>
-</div>
-<div class="signinSubmit">
+
+    <div class="signinPassword">
+      <label
+        for="user-pass">Password</label>
+    </div>
+
     <input type="password"
       name="password" id="user-pass">
-    <button class="buta"
-      type="submit">Sign In</button>
+
+    <div class="signinSubmit">
+      <button type="submit">Sign
+        In</button>
   </form>
+</div>
+
 </div>
 
 {{#if errorMessage}}
