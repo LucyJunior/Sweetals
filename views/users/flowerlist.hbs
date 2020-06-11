@@ -1,21 +1,9 @@
- <nav>
-    <ul>
-      <li id="to-right"></li>
-      <a href="/flowerList">List of flowers</a> <span> | </span>
-      </li>
-
-      <li id="to-right"></li>
-      <a href="/userRecipe">My recipes</a> <span> | </span>
-      </li>
-    </ul>
-  </nav>
-  </html>
-
 
 {{#each flowers}}
   <h3>Name : {{this.name}} </h3>
-  <p>Family: {{this.family}} </p>
- <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
+  <div class ="flowerFamilyList"><p>Family: {{this.family}} </p></div>
+  <div class="flowerImgList"> <a href="/flowerInfo/{{this._id}}"><img src="{{this.img}}" ></a>
+</div>
 {{/each}}
 
 {{#if userData}}

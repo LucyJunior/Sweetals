@@ -1,12 +1,23 @@
-
-<form method="POST" action="/signin">
-    <label for="user-email">Email</label>
-    <input type="email" name="email" id="user-email" >
-    <label for="user-pass">Password</label>
-    <input type="password" name="password" id="user-pass" >
-    <button type="submit" >Sign In</button>
-</form>
+<div class="signinEmail">
+  <form method="POST" action="/signin">
+    <label
+      for="user-email">Email</label>
+</div>
+<div class="signinPassword">
+    <input type="email" name="email"
+      id="user-email">
+    <label
+      for="user-pass">Password</label>
+</div>
+<div class="signinSubmit">
+    <input type="password"
+      name="password" id="user-pass">
+    <button class="buta"
+      type="submit">Sign In</button>
+  </form>
+</div>
 
 {{#if errorMessage}}
-  <div class="error">{{errorMessage}}</div>
-{{/if}}  
+<div class="error">{{errorMessage}}
+</div>
+{{/if}}

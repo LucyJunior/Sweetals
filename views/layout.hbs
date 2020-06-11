@@ -8,29 +8,44 @@
   <meta http-equiv="X-UA-Compatible"
     content="ie=edge">
   <title>{{title}}</title>
-  <link rel="stylesheet"
-    href="/stylesheets/style.css" />
+  <link rel="stylesheet"href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+
 </head>
 
-<body>
+<body >
 
-  <nav>
-    <ul>
+  
+    {{!-- <ul>
       <li id="to-left">
         <p><a href="/"> Sweetals </a>
         </p>
       </li>
       <li id="to-right">
         <a href="/signup">Signup</a>
-        <span> | </span>
       </li>
       <li id="to-right">
         <a href="/signin">Sign In</a>
-        <span> | </span>
+      </li>
+    </ul>
+  </nav> --}}
+{{#if userData}}
+   <nav>
+    <ul>
+      <li id="to-right"></li>
+      <a href="/flowerList">List of flowers</a> 
+      </li>
+
+      <li id="to-right"></li>
+      <a href="/userRecipe">My recipes</a> 
       </li>
     </ul>
   </nav>
 
+ 
+<p>Hello {{userData.username}}</p>
+
+{{/if}}
   {{{body}}}
 
   <script
@@ -41,8 +56,3 @@
 
 </html>
 
-{{#if userData}}
-
-<p>Hello {{userData.username}}</p>
-
-{{/if}}

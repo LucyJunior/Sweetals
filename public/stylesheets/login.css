@@ -1,4 +1,90 @@
+/* Media screen for : IPhone 6+, 7+, 8+ PLUS */
+
 body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #c6004d;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+
+@media only screen
+and (min-device-width: 414px) and (max-device-width: 736px)
+{
+
+}
+/* ------- PROFIL  -------- */
+
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../images/profil_bg.jpg");
+  background-repeat:no-repeat;
+  width: 100vw;
+  /* relative to the width of my screen, vh is for height */
+  height: 100vh;
+  background-size:cover;
+  text-align: center;
+}
+
+.header{
+  background-color: rgba(255, 255, 255,0.5) ;
+
+}
+
+h1{
+  color: #c6004d;
+  margin-top: 70px;
+  font-size: 50px;
+}
+
+ul {
+  margin-top: 0;
+  list-style-type: none;
+}
+
+ button{
+   border: 2px solid #c6004d;
+   background-color: rgba(255, 255, 255,0.5) ;
+   border-radius: 10px;
+   font-size: 24px;
+   color:  #c6004d;
+   padding: 10px 35px ;
+   cursor: pointer;
+ }
+
+
+ .signup{
+   display: inline-block;
+   margin: 30px 0 120px 0;}   
+
+/* ------- End PROFIL   -------- */
+
+/* ------- SIGNIN   -------- */
+.signin {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/profil_bg.jpg");
+  background-repeat:no-repeat;
+  width: 100vw;
+  /* relative to the width of my screen, vh is for height */
+  height: 100vh;
+  background-size:cover;
+  display: inline-block;
+
+}
+
+
+/* ------- End SIGNIN   -------- */
+
+
+/* 
+ body {
   padding: 50px;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
@@ -33,12 +119,7 @@ form button {
   
 }
 
-.ingredients,
-.square {
-  height: 500px;
-  width: 500px;
-  background-color: white;
-}
+
 
 form button {
   background: #4e0725;
@@ -106,4 +187,4 @@ ul li {
   font-size: 2em;
 }
 
-
+  */
