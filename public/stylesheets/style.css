@@ -62,32 +62,71 @@ nav ul {
   flex-direction: row;
   justify-content: flex-start;
   padding: 40px 0 0 90px;
+  font-size: 20px;
 }
 
 nav li {
   margin-right: 10px;
 }
 
+nav li:hover {
+  margin-right: 10px;
+  text-decoration: underline;
+}
+
+/* a:active{
+  text-decoration: underline;
+
+} */
 
 .recipeContainer {
   padding: 120px 100px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap:wrap;
+  border-style: 2px solid #c6004d;
+
 }
+
 
 .flowerInfo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  font-size: 25px;
+  margin-bottom: 100px;
+
 }
 
 .recipe:nth-of-type(odd) {
   display: flex;
+  border: 1px solid #c6004d;
+  padding: 40px 20px;
+  margin: 40px 0;
+
+}
+
+.recipe:nth-of-type(odd):hover {
+  display: flex;
+  background-color: rgba(198, 0, 77, 0.1);
+  border: 1px solid #c6004d;
+  padding: 40px 20px;
+
 }
 
 .recipe:nth-of-type(even) {
   display: flex;
   flex-direction: row-reverse;
+  border: 1px solid #c6004d;
+  padding: 40px 20px;
+
+}
+
+.recipe:nth-of-type(even):hover {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 2px solid #c6004d;
+  background-color: rgba(198, 0, 77, 0.1);
+  padding: 40px 20px;
 }
 
 .imgRecipe {
@@ -99,13 +138,30 @@ nav li {
   background: transparent;
   margin: 0 30px;
 }
-.recipeText p{
-  text-overflow: ellipsis}
+
+.recipeText p {
+  text-overflow: ellipsis;
+  font-size: 20px;
+}
 
 .butAddContainer {
   text-align: center;
 }
 
+.butAddRecipe {
+  border: 2px solid #c6004d;
+  background-color: rgba(198, 0, 77, 0.2);
+  border-radius: 10px;
+  font-size: 24px;
+  color: #c6004d;
+  padding: 10px 120px;
+  cursor: pointer;
+  margin: 40px;
+}
+
+.butAddRecipe:hover {
+  background-color: rgba(198, 0, 77, 0.1);
+}
 
 @media screen and (max-width: 414px) {
   nav ul {
@@ -114,15 +170,18 @@ nav li {
     justify-content: flex-start;
     padding: 10px 0 0 20px;
   }
+
   nav li {
     margin-right: 5px;
     font-size: 15px;
   }
+
   .recipeContainer {
     padding: 20px 20px;
     display: flex;
     flex-wrap: nowrap;
   }
+
   .imgRecipe {
     display: inline-block;
     width: 80px;
@@ -132,11 +191,13 @@ nav li {
     background: transparent;
     margin: 0 5px;
   }
+
   .recipe {
     max-height: 50px;
   }
-  .recipeText p{
-  text-overflow: ellipsis
-}
-  
+
+  .recipeText p {
+    text-overflow: ellipsis
+  }
+
 }

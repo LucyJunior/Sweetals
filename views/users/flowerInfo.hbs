@@ -1,49 +1,67 @@
-  <nav>
-    <ul>
-      <li>
-      <a href="/flowerList" class="linkFlowerList">List of flowers</a> 
-      </li>
-
-      <li>
-      <a href="/userRecipe" class="linkuserRecipe" >My recipes</a> 
-      </li>
-
-      <li>
-      <a href="/logout" class="butLogout"  >Log out </a>
+<nav>
+  <ul>
+    <li>
+      <a href="/flowerList"
+        class="linkFlowerList">List of
+        flowers</a>
     </li>
-    
-    </ul>
 
-   
-  </nav>
+    <li>
+      <a href="/userRecipe"
+        class="linkuserRecipe">My
+        recipes</a>
+    </li>
+
+    <li>
+      <a href="/logout"
+        class="butLogout">Log out </a>
+    </li>
+
+  </ul>
+
+
+</nav>
 
 <div class="recipeContainer">
 
-<div class="flowerInfo">
-  <h3>Name : {{flower.name}}</h3>
-  <p>More about the flower:
-    {{flower.description}}</p>
+  <div class="flowerInfo">
+    
+    <div class="flowerImg"><img
+        src="{{flower.img}}">
+    </div>
 
- 
+    <div class="flowerInfoText">
+      <h3> {{flower.name}}</h3>
+      <p>{{flower.description}}</p>
+    </div>
+
+  </div> {{!-- flowerinfo end --}}
+
+
   {{#each recipes}}
   <div class="recipe">
 
-  <div class="recipeText">
-    <a href="/finalRecipe/{{this._id}}">
-    <p>{{this.title}}</p></a>
-    <p>{{this.ingredients}}</p>
-  </div>
+    <div class="recipeText">
+      <a
+        href="/finalRecipe/{{this._id}}">
+        <p>{{this.title}}</p>
+      </a>
+      <p>{{this.preparation}}</p>
+    </div> {{!-- recipeText end --}}
 
-  <div >
-    <img class="imgRecipe" src="{{this.img}}">
-  </div>
+    <div>
+      <img class="imgRecipe"
+        src="{{this.img}}">
+    </div>
 
-</div>
+  </div> {{!-- recipe end --}}
   {{/each}}
 
-<div class="butAddContainer">
-  <a href="/flowerInfo/{{flower._id}}/newRecipe"><button class="butAddRecipe">Add a Recipe</button></a> 
-</div>
-</div>
+  <div class="butAddContainer">
+    <a
+      href="/flowerInfo/{{flower._id}}/newRecipe"><button
+        class="butAddRecipe">Add a
+        Recipe</button></a>
+  </div> {{!-- butAddContainer end --}}
 
-</div>
+</div> {{!-- recipeContainer end --}}
