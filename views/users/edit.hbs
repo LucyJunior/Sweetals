@@ -1,3 +1,18 @@
+  <nav>
+    <ul>
+      <li></li>
+      <a href="/flowerList">List of flowers</a> 
+      </li>
+
+      <li></li>
+      <a href="/userRecipe">My recipes</a> 
+      </li>
+    </ul>
+
+   <li>
+      <a href="/logout"><button class="butLogout">Log out</button> </a>
+    </li>
+  </nav>
 
 
   <form method="POST" action="/edit/{{recipe._id}}">
@@ -16,12 +31,17 @@
     name="numberOfPeople"
     id="numberOfPeople" min="1">
 
+ <label
+    for="ingredients">Ingredients</label>
+  <textarea  name="ingredients" rows="10"
+    cols="30"
+    placeholder="Ingredients">{{recipe.ingredients}}</textarea>
+
   <label
-    for="preparation">recipe</label>
+    for="preparation">Preparation</label>
   <textarea  name="preparation" rows="10"
     cols="30"
     placeholder="Your recipe here">{{recipe.preparation}}</textarea>
-  {{!-- //when the user submits this form, how will we pass the flower details ? --}}
 
   <a href="/finalRecipe/{{recipe._id}}"></a><button type="submit">Save</button>
 </form>

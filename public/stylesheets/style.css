@@ -1,40 +1,40 @@
-
-  
-  img{
+img {
   display: inline;
   width: 200px;
   height: 200px;
   padding: 5px;
   border: 1px solid blue;
   background-color: yellow;
-  }
+}
 
-  .imageContainer {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .flowerImage {
-    padding:20px;
-  }
+.flowerImage {
+  padding: 20px;
+}
 
-  footer {
-    margin-bottom: 0;
-  }
+footer {
+  margin-bottom: 0;
+}
 
-  .recipe:nth-of-type(odd) {
-    display: flex;
-  }
-  .recipe:nth-of-type(even) {
-    display: flex;
-    flex-direction: row-reverse;
-  }
+.recipe:nth-of-type(odd) {
+  display: flex;
+}
 
-  .MainTitle{
+.recipe:nth-of-type(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
-    text-align: center;
+.MainTitle {
 
-  }
+  text-align: center;
+
+}
+
 /* Media screen for : IPhone 6+, 7+, 8+ PLUS */
 
 body {
@@ -53,11 +53,29 @@ a {
 and (min-device-width: 414px) and (max-device-width: 736px)
 {
 } */
- 
 
-/* ----------- FLOWERINFO ----------- */
 
-.flowerInfo{
+/* ----------- FLOWERINFO  Aurore----------- */
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 40px 0 0 90px;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+
+.recipeContainer {
+  padding: 120px 100px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flowerInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,7 +84,59 @@ and (min-device-width: 414px) and (max-device-width: 736px)
 .recipe:nth-of-type(odd) {
   display: flex;
 }
+
 .recipe:nth-of-type(even) {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.imgRecipe {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  /* to make im square */
+  background: transparent;
+  margin: 0 30px;
+}
+.recipeText p{
+  text-overflow: ellipsis}
+
+.butAddContainer {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 414px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 0 0 20px;
+  }
+  nav li {
+    margin-right: 5px;
+    font-size: 15px;
+  }
+  .recipeContainer {
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .imgRecipe {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    /* to make im square */
+    background: transparent;
+    margin: 0 5px;
+  }
+  .recipe {
+    max-height: 50px;
+  }
+  .recipeText p{
+  text-overflow: ellipsis
+}
+  
 }
