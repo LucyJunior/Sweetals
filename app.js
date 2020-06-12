@@ -57,10 +57,6 @@ app.use(session({
     })
 }));
 
-// app.get('/flowerlist', function (req,res) {
-//   res.render(__dirname + '/views/users/flowerlist.hbs', {flower})
-// })
-
 
 
 // a body parser to allow us to parse form submissions

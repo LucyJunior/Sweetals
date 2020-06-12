@@ -156,8 +156,8 @@ router.get('/logout', (req, res) => {
   res.redirect("/signin")
 }),
 
-router.get('/profile', (req, res) => {
-    res.render('users/profile.hbs', {userData: req.session.loggedInUser});
+router.get('/flowerList', (req, res) => {
+    res.render('users/flowerList.hbs', {userData: req.session.loggedInUser});
 })
 
 module.exports = router;
